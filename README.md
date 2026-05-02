@@ -149,6 +149,18 @@ See `docs/nexus-packaging.md` for Nexus packaging notes.
 
 The bridge imports a Skyrim-side JSON export into the companion database.
 
+Base-game Skyrim ingredient Form IDs are mapped in:
+
+```text
+skyrim_mod/data/ingredient-form-map.json
+```
+
+Validate the mapping with:
+
+```sh
+uv run python tools/validate_skyrim_mapping.py
+```
+
 Test with the sample export:
 
 ```sh

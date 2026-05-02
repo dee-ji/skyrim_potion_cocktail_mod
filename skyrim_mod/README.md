@@ -23,6 +23,16 @@ The Skyrim plugin should not reimplement:
 
 Those remain in the companion app. Skyrim-side code should collect and export data only.
 
+## Inventory Mapping
+
+Base-game ingredient Form IDs are mapped in:
+
+```text
+skyrim_mod/data/ingredient-form-map.json
+```
+
+This mapping covers the 91 companion ingredients whose source is `Skyrim`. DLC, Creation Club, `_ResourcePack.esl`, Creation-specific sources, and quest-only variants are deferred until the base-game bridge is working from a real save.
+
 ## Expected Tooling
 
 The bridge likely needs SKSE plus a JSON-capable Papyrus utility such as PapyrusUtil or JContainers. If that changes, document the actual tooling in this directory before expanding implementation.
@@ -32,8 +42,8 @@ The bridge likely needs SKSE plus a JSON-capable Papyrus utility such as Papyrus
 ```text
 skyrim_mod/
   README.md
+  data/
   source/
     scripts/
   packaging/
 ```
-

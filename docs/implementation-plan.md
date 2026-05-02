@@ -169,6 +169,8 @@ Exit criteria:
 
 Goal: define the mapping between Skyrim ingredient forms and companion ingredient names.
 
+Status: in progress. Base-game `Skyrim.esm` ingredient Form ID mapping and validation tests have been added.
+
 Scope:
 
 1. Add a data file for Skyrim form/editor IDs mapped to canonical ingredient names.
@@ -192,6 +194,7 @@ Verification:
 
 ```sh
 uv run pytest -q
+uv run python tools/validate_skyrim_mapping.py
 ```
 
 Manual checks:
