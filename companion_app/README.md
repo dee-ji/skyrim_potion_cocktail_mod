@@ -4,10 +4,12 @@ The companion app packages the current Skyrim Potion Cocktails FastAPI experienc
 
 ## Runtime
 
-The vendored runtime lives in `companion_app/runtime/app` and is synced from the authoritative source app with:
+The vendored runtime lives in `companion_app/runtime/app`. It is committed in this repo so users and packagers do not need the original Skyrim Potion Cocktails app checkout.
+
+Maintainers can refresh it from the authoritative source app with:
 
 ```sh
-uv run python tools/sync_companion_runtime.py
+uv run python tools/build_companion.py --refresh-source --skip-pyinstaller --source /path/to/skyrim_potion_cocktail_app
 ```
 
 The sync writes `companion_app/runtime-manifest.json`, including the source repo commit, dirty state, and hashes for every copied runtime file.
@@ -60,4 +62,4 @@ Run the maintainer build flow with:
 uv run python tools/build_companion.py
 ```
 
-Use `--skip-pyinstaller` for a preflight check when PyInstaller is not installed.
+Use `--skip-pyinstaller` for a preflight check when PyInstaller is not installed. The default build flow uses committed files only. Add `--refresh-source --source /path/to/skyrim_potion_cocktail_app` only when intentionally updating the vendored baseline from the source app.

@@ -26,6 +26,7 @@ Treat the following as authoritative unless replaced by an explicit shared expor
 - Build the companion app first.
 - Keep the in-game mod scope intentionally small at first.
 - Do not attempt full UI parity inside Skyrim as an initial milestone.
+- Keep this repo independently runnable from committed files. The source app may be used by maintainers to refresh vendored baseline assets, but it must not be required for normal companion-app launch, packaging, or future Skyrim mod development.
 
 ## Priorities
 

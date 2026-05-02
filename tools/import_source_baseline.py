@@ -4,6 +4,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import os
 import shutil
 import subprocess
 from datetime import UTC, datetime
@@ -76,7 +77,7 @@ def build_manifest(
     return {
         "schema_version": 1,
         "imported_at": datetime.now(UTC).isoformat(timespec="seconds"),
-        "source_repo": str(source_root),
+        "source_repo": source_root.name,
         "source_commit": run_git(source_root, "rev-parse", "HEAD"),
         "source_dirty": bool(status),
         "source_status": status.splitlines(),
@@ -91,15 +92,21 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--source",
         type=Path,
-        default=repo_root().parent / "skyrim_potion_cocktail_app",
-        help="Path to the source app repo. Defaults to ../skyrim_potion_cocktail_app.",
+        default=None,
+        help="Path to the source app repo. Can also be set with SKYRIM_POTION_SOURCE_APP.",
     )
     return parser.parse_args()
 
 
 def main() -> int:
     args = parse_args()
-    source_root = args.source.expanduser().resolve()
+    source_arg = args.source or os.environ.get("SKYRIM_POTION_SOURCE_APP")
+    if source_arg is None:
+        raise SystemExit(
+            "Source app path is required. Pass --source /path/to/source-app or set SKYRIM_POTION_SOURCE_APP."
+        )
+
+    source_root = Path(source_arg).expanduser().resolve()
     destination_root = repo_root()
 
     if not source_root.is_dir():

@@ -18,7 +18,7 @@ Authoritative domain behavior still lives in the source app repo until this repo
 
 Goal: establish a repeatable way to consume the source app baseline before building new behavior.
 
-Status: started. The repo now has an importer, imported baseline assets, a source manifest, and a validation script.
+Status: started. The repo now has an explicit maintainer importer, imported baseline assets, a source manifest, and a validation script. The committed baseline is sufficient for users and packagers who do not have the source app repo.
 
 Tasks:
 
@@ -50,7 +50,7 @@ Open decisions:
 
 Goal: package the existing Skyrim Potion Cocktails experience into a local Windows-friendly app suitable for Nexus distribution.
 
-Status: started. The repo now has a synced source-app runtime, local launcher, dependency metadata, initial PyInstaller packaging notes, and a maintainer build command.
+Status: started. The repo now has a committed source-app runtime snapshot, local launcher, dependency metadata, initial PyInstaller packaging notes, and a maintainer build command that does not require the source app unless `--refresh-source` is requested.
 
 ### Milestone 1: Runtime Shape
 
@@ -177,7 +177,7 @@ docs/
 
 ## Immediate Next Steps
 
-1. Decide whether the current copied-file import strategy is sufficient, or whether the source app should provide an explicit export package later.
+1. Decide whether the current committed copied-file baseline is sufficient, or whether the source app should provide an explicit export package later.
 2. Keep `docs/divergences.md` updated as soon as any source-app behavior changes for packaging, UX, or Skyrim engine reasons.
 3. Produce and test the first Windows PyInstaller build.
 4. Add release archive hashes and versioning once a Windows artifact exists.

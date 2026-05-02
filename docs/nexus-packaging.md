@@ -56,6 +56,8 @@ From the repo root:
 uv run python tools/build_companion.py
 ```
 
+This build uses the vendored runtime and shared baseline committed in this repo. It does not require the original Skyrim Potion Cocktails app checkout.
+
 For a preflight without producing a PyInstaller build:
 
 ```sh

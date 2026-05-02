@@ -22,3 +22,9 @@ uv run python tools/build_companion.py
 ```
 
 Use `uv run python tools/build_companion.py --skip-pyinstaller` to run the preflight checks without producing a packaged build.
+
+The default build flow is independent of the original source app checkout. To intentionally refresh the vendored runtime and shared baseline before building:
+
+```sh
+uv run python tools/build_companion.py --refresh-source --source /path/to/skyrim_potion_cocktail_app
+```

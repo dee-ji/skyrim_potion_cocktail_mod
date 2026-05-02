@@ -42,6 +42,8 @@ The source app repo remains the current authority for:
 - discovery-scoring semantics
 - inventory and known-effect behavior
 
+This repo vendors the current companion runtime and shared baseline. Users and packagers do not need the source app repo installed to run or build from the committed baseline.
+
 ## Initial Layout
 
 - `docs/`
@@ -59,7 +61,7 @@ Deliver a first companion-app milestone before starting in-game integration.
 
 ## Companion App Development
 
-Refresh the source baseline and synced companion runtime:
+Run the companion preflight from the committed baseline:
 
 ```sh
 uv run python tools/build_companion.py --skip-pyinstaller

@@ -26,15 +26,21 @@ If this repo intentionally differs from the source app:
 - explain why the divergence is necessary
 - state whether the cause is UX, packaging, Skyrim engine limits, or modding-tool limits
 
-## Current Import Strategy
+## Current Committed Baseline
 
-Phase 0 imports the authoritative baseline into `shared/` with:
+This repo commits the current shared baseline and companion runtime so users, packagers, and future Skyrim mod work do not require the original source app checkout.
+
+The source app remains the authority for domain evolution, but it is not a runtime dependency of this repo.
+
+## Maintainer Import Strategy
+
+When intentionally refreshing from the source app, import the authoritative baseline into `shared/` with:
 
 ```sh
-uv run python tools/import_source_baseline.py
+uv run python tools/import_source_baseline.py --source /path/to/skyrim_potion_cocktail_app
 ```
 
-By default, the importer reads from the sibling source repo at `../skyrim_potion_cocktail_app`. Pass `--source /path/to/source/repo` to use a different checkout.
+You can also set `SKYRIM_POTION_SOURCE_APP=/path/to/skyrim_potion_cocktail_app`.
 
 The import writes:
 
@@ -53,10 +59,10 @@ uv run python tools/validate_shared_baseline.py
 
 ## Companion Runtime Sync
 
-Phase 1 vendors the source app runtime into `companion_app/runtime/app` with:
+Phase 1 vendors the source app runtime into `companion_app/runtime/app`. When intentionally refreshing it, run:
 
 ```sh
-uv run python tools/sync_companion_runtime.py
+uv run python tools/sync_companion_runtime.py --source /path/to/skyrim_potion_cocktail_app
 ```
 
 The sync excludes generated caches and SQLite database files. It writes `companion_app/runtime-manifest.json` with the source commit, dirty state, synced files, sizes, and hashes.

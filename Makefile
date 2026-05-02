@@ -1,4 +1,4 @@
-.PHONY: companion-check companion-build companion-run shared-validate runtime-validate runtime-sync
+.PHONY: companion-check companion-build companion-run shared-validate runtime-validate source-refresh
 
 companion-check:
 	uv run python tools/build_companion.py --skip-pyinstaller
@@ -15,5 +15,8 @@ shared-validate:
 runtime-validate:
 	uv run python tools/validate_companion_runtime.py
 
-runtime-sync:
-	uv run python tools/sync_companion_runtime.py
+source-refresh:
+ifndef SKYRIM_POTION_SOURCE_APP
+	$(error Set SKYRIM_POTION_SOURCE_APP=/path/to/skyrim_potion_cocktail_app)
+endif
+	uv run python tools/build_companion.py --refresh-source --skip-pyinstaller --source "$$SKYRIM_POTION_SOURCE_APP"

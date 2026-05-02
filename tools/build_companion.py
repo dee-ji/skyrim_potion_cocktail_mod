@@ -25,13 +25,18 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--source",
         type=Path,
-        default=repo_root().parent / "skyrim_potion_cocktail_app",
-        help="Path to the source app repo. Defaults to ../skyrim_potion_cocktail_app.",
+        default=None,
+        help="Path to the source app repo. Only used with --refresh-source.",
+    )
+    parser.add_argument(
+        "--refresh-source",
+        action="store_true",
+        help="Refresh vendored shared/runtime files from the source app before building.",
     )
     parser.add_argument(
         "--skip-pyinstaller",
         action="store_true",
-        help="Run import, validation, sync, and launcher checks without producing a packaged build.",
+        help="Run validation and launcher checks without producing a packaged build.",
     )
     return parser.parse_args()
 
@@ -39,17 +44,32 @@ def parse_args() -> argparse.Namespace:
 def main() -> int:
     args = parse_args()
     root = repo_root()
-    source = args.source.expanduser().resolve()
 
-    run(
-        [sys.executable, "tools/import_source_baseline.py", "--source", str(source)],
-        root,
-    )
+    if args.refresh_source:
+        if args.source is None:
+            raise SystemExit("--refresh-source requires --source /path/to/source-app")
+
+        source = args.source.expanduser().resolve()
+        run(
+            [
+                sys.executable,
+                "tools/import_source_baseline.py",
+                "--source",
+                str(source),
+            ],
+            root,
+        )
+        run(
+            [
+                sys.executable,
+                "tools/sync_companion_runtime.py",
+                "--source",
+                str(source),
+            ],
+            root,
+        )
+
     run([sys.executable, "tools/validate_shared_baseline.py"], root)
-    run(
-        [sys.executable, "tools/sync_companion_runtime.py", "--source", str(source)],
-        root,
-    )
     run([sys.executable, "tools/validate_companion_runtime.py"], root)
     check_state_dir = (
         Path(tempfile.gettempdir()) / "skyrim-potion-cocktails-build-check"
