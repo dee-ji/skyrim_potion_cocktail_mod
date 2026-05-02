@@ -9,6 +9,7 @@ venv/
 build/
 dist/
 *.spec
+!companion_app/packaging/skyrim-potion-cocktails.spec
 
 # Editors
 .idea/
