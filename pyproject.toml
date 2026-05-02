@@ -1,0 +1,20 @@
+[project]
+name = "skyrim-potion-cocktail-mod"
+version = "0.1.0"
+description = "Hybrid delivery repo for Skyrim Potion Cocktails companion app and mod integration."
+requires-python = ">=3.11"
+dependencies = [
+  "fastapi[standard]>=0.115.0",
+  "uvicorn[standard]>=0.30.0",
+]
+
+[project.optional-dependencies]
+build = [
+  "pyinstaller>=6.0.0",
+]
+
+[tool.uv]
+package = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

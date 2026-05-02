@@ -56,3 +56,19 @@ The source app repo remains the current authority for:
 ## Immediate Next Goal
 
 Deliver a first companion-app milestone before starting in-game integration.
+
+## Companion App Development
+
+Refresh the source baseline and synced companion runtime:
+
+```sh
+uv run python tools/build_companion.py --skip-pyinstaller
+```
+
+Launch the local companion app after installing dependencies:
+
+```sh
+uv run python companion_app/launcher.py
+```
+
+See `companion_app/README.md` and `docs/nexus-packaging.md` for runtime and packaging details.

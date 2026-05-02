@@ -50,6 +50,8 @@ Open decisions:
 
 Goal: package the existing Skyrim Potion Cocktails experience into a local Windows-friendly app suitable for Nexus distribution.
 
+Status: started. The repo now has a synced source-app runtime, local launcher, dependency metadata, initial PyInstaller packaging notes, and a maintainer build command.
+
 ### Milestone 1: Runtime Shape
 
 Choose the companion-app delivery shape:
@@ -69,7 +71,7 @@ Tasks:
 
 Deliverables:
 
-- `companion_app/` contains a launcher proof of concept or runtime notes.
+- `companion_app/` contains a launcher proof of concept and runtime notes.
 - Runtime behavior is documented for development and packaged builds.
 
 ### Milestone 2: Shared Data Boundary
@@ -177,5 +179,5 @@ docs/
 
 1. Decide whether the current copied-file import strategy is sufficient, or whether the source app should provide an explicit export package later.
 2. Keep `docs/divergences.md` updated as soon as any source-app behavior changes for packaging, UX, or Skyrim engine reasons.
-3. Inspect the source app runtime and choose the companion packaging approach.
-4. Build the first companion launcher proof of concept before starting Creation Kit work.
+3. Produce and test the first Windows PyInstaller build.
+4. Add release archive hashes and versioning once a Windows artifact exists.

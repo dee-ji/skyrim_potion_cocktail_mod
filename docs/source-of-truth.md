@@ -31,7 +31,7 @@ If this repo intentionally differs from the source app:
 Phase 0 imports the authoritative baseline into `shared/` with:
 
 ```sh
-python3 tools/import_source_baseline.py
+uv run python tools/import_source_baseline.py
 ```
 
 By default, the importer reads from the sibling source repo at `../skyrim_potion_cocktail_app`. Pass `--source /path/to/source/repo` to use a different checkout.
@@ -48,5 +48,21 @@ The import writes:
 Validate the imported baseline with:
 
 ```sh
-python3 tools/validate_shared_baseline.py
+uv run python tools/validate_shared_baseline.py
+```
+
+## Companion Runtime Sync
+
+Phase 1 vendors the source app runtime into `companion_app/runtime/app` with:
+
+```sh
+uv run python tools/sync_companion_runtime.py
+```
+
+The sync excludes generated caches and SQLite database files. It writes `companion_app/runtime-manifest.json` with the source commit, dirty state, synced files, sizes, and hashes.
+
+Validate the synced runtime with:
+
+```sh
+uv run python tools/validate_companion_runtime.py
 ```

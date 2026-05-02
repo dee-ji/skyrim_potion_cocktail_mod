@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "synced_at": "2026-05-02T17:48:39+00:00",
+  "source_repo": "/Users/data/PycharmProjects/skyrim_potion_cocktail_app",
+  "source_commit": "ffa954554049b6c46891afc0351ea21ee0ecc428",
+  "source_dirty": false,
+  "source_status": [],
+  "runtime_source": "app",
+  "runtime_destination": "companion_app/runtime/app",
+  "files": [
+    {
+      "source": "app/__init__.py",
+      "destination": "companion_app/runtime/app/__init__.py",
+      "sha256": "6803ea09f0909e00b099b8c633182929d31711f2baeafdc4d2450963458020a8",
+      "size_bytes": 77
+    },
+    {
+      "source": "app/app_factory.py",
+      "destination": "companion_app/runtime/app/app_factory.py",
+      "sha256": "4b0babdab395ccfeeb314bdf34c54b3943d822112ee82ec843fdca301a015c84",
+      "size_bytes": 945
+    },
+    {
+      "source": "app/config.py",
+      "destination": "companion_app/runtime/app/config.py",
+      "sha256": "a54093ab5591ba903e1c227195930c96eff64c37e45994b4ff894c5f7655ff2b",
+      "size_bytes": 313
+    },
+    {
+      "source": "app/data/ingredients.json",
+      "destination": "companion_app/runtime/app/data/ingredients.json",
+      "sha256": "e650f49197aa9bec860fc10aea309228e1382c68d1d3e4842cb4113f6143b5b1",
+      "size_bytes": 35172
+    },
+    {
+      "source": "app/db.py",
+      "destination": "companion_app/runtime/app/db.py",
+      "sha256": "8edcf9d8048521d88df81410a5c7bd152ddeca410b7f46f8b52ed2a56ddc7862",
+      "size_bytes": 5656
+    },
+    {
+      "source": "app/main.py",
+      "destination": "companion_app/runtime/app/main.py",
+      "sha256": "3cab2e31ded1f5ca9cd5cd6a3fe60218908256d3723fab8f15b3338a73e1bcb9",
+      "size_bytes": 194
+    },
+    {
+      "source": "app/rarity.py",
+      "destination": "companion_app/runtime/app/rarity.py",
+      "sha256": "71696f52031a302b6eab108dffc6c2d6ae80ff6fbb7d050c48c020f8ea5d5e4b",
+      "size_bytes": 5234
+    },
+    {
+      "source": "app/routes/__init__.py",
+      "destination": "companion_app/runtime/app/routes/__init__.py",
+      "sha256": "f08d1ad4237e6f5de23d08685a87c549cefc7ba2547b7c069d29678ab4edcacc",
+      "size_bytes": 249
+    },
+    {
+      "source": "app/routes/characters.py",
+      "destination": "companion_app/runtime/app/routes/characters.py",
+      "sha256": "d167446978e136b527bbf103c3218171d0bf9e851d6c10562cf1d21482f7c8db",
+      "size_bytes": 12416
+    },
+    {
+      "source": "app/routes/ingredients.py",
+      "destination": "companion_app/runtime/app/routes/ingredients.py",
+      "sha256": "9e62b284d8747a44f4c44bb9ccdbf58686967415d1f97561f78f318cfcdd6660",
+      "size_bytes": 1066
+    },
+    {
+      "source": "app/routes/pages.py",
+      "destination": "companion_app/runtime/app/routes/pages.py",
+      "sha256": "31e585d67b8eac0485b80e83486d17ee6aba404b59c21c68b7f09995253dc82e",
+      "size_bytes": 290
+    },
+    {
+      "source": "app/schemas.py",
+      "destination": "companion_app/runtime/app/schemas.py",
+      "sha256": "570e6645194b92293b700591a22a267d35591fe0bb04cfc170b52c6f587f34ea",
+      "size_bytes": 2001
+    },
+    {
+      "source": "app/services.py",
+      "destination": "companion_app/runtime/app/services.py",
+      "sha256": "0b1aa03f0bf6488f26d1080042a72b22fac3a2d02338387964b855595f18e99c",
+      "size_bytes": 2913
+    },
+    {
+      "source": "app/static/index.html",
+      "destination": "companion_app/runtime/app/static/index.html",
+      "sha256": "b13faa8cbb749af755ff86563162fd27fc4f08c0932b471c939fe93ddfdcca9e",
+      "size_bytes": 43480
+    }
+  ]
+}

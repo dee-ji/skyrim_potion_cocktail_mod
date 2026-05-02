@@ -46,3 +46,4 @@ Treat the following as authoritative unless replaced by an explicit shared expor
 - Prefer incremental milestones.
 - Document divergences caused by Skyrim engine limitations.
 - Keep the repo friendly to future packaging and Nexus release workflows.
+- Use `uv` for Python execution in this repo. Document commands as `uv run python ...`, use `uv sync` for dependency setup, and keep child Python processes on `sys.executable` so they inherit the uv-managed environment.

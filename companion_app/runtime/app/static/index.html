@@ -1,0 +1,1018 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Skyrim Potion Cocktails</title>
+<style>
+:root{--bg:#071014;--panel:#0d1a1f;--panel2:#13252b;--text:#e8e3d6;--muted:#9eb0ab;--gold:#b88b43;--gold2:#e0bd7a;--red:#b85f58;--green:#6ea689;--border:#2b4a4f;--shadow:0 18px 46px rgba(0,0,0,.42);--glow:rgba(97,173,166,.16);--ink:#05090b}
+*{box-sizing:border-box}
+body{margin:0;background:
+radial-gradient(circle at top,rgba(64,119,117,.22) 0,rgba(12,29,34,.2) 18%,rgba(7,16,20,.98) 48%),
+linear-gradient(180deg,#071014 0,#05090b 100%);
+color:var(--text);font-family:"Palatino Linotype","Book Antiqua",Palatino,Georgia,serif;line-height:1.45}
+header{padding:32px 16px 18px;text-align:center;border-bottom:1px solid rgba(96,157,150,.3);background:
+linear-gradient(180deg,rgba(184,139,67,.14),rgba(20,38,43,.12) 45%,transparent),
+radial-gradient(circle at top,rgba(84,155,148,.18),transparent 60%)}
+h1{font-family:Georgia,"Times New Roman",serif;margin:0 0 8px;font-size:clamp(2.2rem,6vw,4.2rem);letter-spacing:.08em;color:var(--gold2);text-transform:uppercase;text-shadow:0 0 18px rgba(184,139,67,.22),0 2px 0 #000}
+.subtitle{max-width:1100px;margin:auto;color:var(--muted)}
+main{max-width:1450px;margin:auto;padding:18px 14px 60px}
+.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:14px}
+.card{background:
+linear-gradient(180deg,rgba(255,255,255,.02),transparent 18%),
+linear-gradient(180deg,var(--panel),#091216);
+border:1px solid var(--border);border-radius:18px;box-shadow:var(--shadow),inset 0 1px 0 rgba(255,255,255,.03),0 0 0 1px rgba(8,14,16,.45);padding:16px;position:relative;overflow:hidden}
+.card::before{content:"";position:absolute;inset:0;border-radius:18px;pointer-events:none;background:linear-gradient(135deg,rgba(97,173,166,.04),transparent 28%,transparent 72%,rgba(184,139,67,.05))}
+.span4{grid-column:span 4}
+.span6{grid-column:span 6}
+.span8{grid-column:span 8}
+.span12{grid-column:span 12}
+@media(max-width:900px){.span4,.span6,.span8{grid-column:span 12}}
+h2{font-family:Georgia,"Times New Roman",serif;color:var(--gold2);margin:0 0 10px;font-size:1.25rem;letter-spacing:.06em;text-transform:uppercase}
+label{display:block;margin:.55rem 0 .25rem;color:var(--muted);font-size:.93rem}
+select,input,textarea,button{width:100%;border-radius:10px;border:1px solid rgba(74,119,122,.8);background:#081115;color:var(--text);padding:10px;font-size:1rem;font-family:"Palatino Linotype","Book Antiqua",Palatino,Georgia,serif}
+select,input,textarea{box-shadow:inset 0 0 0 1px rgba(255,255,255,.02),0 0 0 1px rgba(0,0,0,.15)}
+button{cursor:pointer;background:linear-gradient(180deg,#6a5631,#3b2d18);color:#f7f0e1;border-color:#8e7441;font-weight:700;box-shadow:0 8px 18px rgba(0,0,0,.22),inset 0 1px 0 rgba(255,255,255,.08)}
+button:hover{filter:brightness(1.08);box-shadow:0 0 0 1px rgba(224,189,122,.15),0 10px 24px rgba(0,0,0,.28)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(max-width:700px){.row{grid-template-columns:1fr}}
+.small{font-size:.86rem;color:var(--muted)}
+.inventory{min-height:280px;overflow:auto;border:1px solid rgba(74,119,122,.58);border-radius:12px;padding:10px;background:linear-gradient(180deg,#071014,#091418);display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:4px;align-content:start}
+.checkline{display:flex;gap:8px;align-items:center;padding:5px;border-radius:8px}
+.checkline input{width:auto}
+.table-wrap{max-height:72vh;overflow:auto;border:1px solid rgba(74,119,122,.58);border-radius:14px;background:linear-gradient(180deg,#081115,#060d10)}
+table{width:100%;border-collapse:separate;border-spacing:0;min-width:1050px}
+th,td{padding:10px;border-bottom:1px solid rgba(96,157,150,.14);vertical-align:top}
+th{position:sticky;top:0;background:linear-gradient(180deg,#152930,#0f1c21);color:var(--gold2);z-index:3;text-align:left;letter-spacing:.04em}
+tr:hover td{background:rgba(255,255,255,.025)}
+.pill{display:inline-block;padding:.18rem .5rem;border-radius:999px;border:1px solid rgba(74,119,122,.62);margin:.1rem;background:#0d171b;color:var(--muted);font-size:.82rem}
+.known{background:#12391d!important;border-color:#77d690!important;color:#dfffe6!important}
+.unknown{background:#431615!important;border-color:#d35d57!important;color:#ffe4e1!important}
+.new{background:#f0d28a;color:#111;font-weight:800}
+.high{border-left:4px solid var(--gold2)!important;background:rgba(184,139,67,.08)}
+.discover{box-shadow:inset 4px 0 0 var(--green),0 0 0 1px rgba(110,166,137,.06)}
+.tinybtn{width:auto;padding:7px 10px;font-size:.85rem;margin:2px}
+.status{margin-top:8px;color:var(--muted)}
+.active{border-color:#77a36b!important;background:#102014!important}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.stat{background:linear-gradient(180deg,#081115,#0a161a);border:1px solid rgba(74,119,122,.5);padding:12px;border-radius:12px;text-align:center}
+.stat b{display:block;font-size:1.5rem;color:var(--gold2)}
+details{border:1px solid rgba(74,119,122,.5);border-radius:14px;padding:10px;background:linear-gradient(180deg,#081115,#0a161a)}
+summary{cursor:pointer;color:var(--gold2);font-weight:700}
+.dbout{max-height:300px;overflow:auto;border:1px solid var(--border);border-radius:12px;margin-top:10px}
+.dbout table{min-width:600px}
+.effect-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:10px}
+@media(max-width:700px){.effect-grid{grid-template-columns:1fr}}
+.effect-chip{display:flex;gap:8px;align-items:center;padding:10px 12px;border:1px solid rgba(74,119,122,.52);border-radius:12px;background:#0b1519}
+.effect-chip input{width:auto;flex:none}
+.legend{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.ingredient-row{padding:8px;border-bottom:1px solid rgba(214,173,86,.15);border-left:4px solid transparent}
+.ingredient-name{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.rarity-badge{font-weight:700}
+.rarity-common{background:#1b3345!important;border-color:#4a7ca3!important;color:#e0f1ff!important}
+.rarity-uncommon{background:#2c2d57!important;border-color:#8089dd!important;color:#ececff!important}
+.rarity-rare{background:#4b3457!important;border-color:#bf8ee1!important;color:#faecff!important}
+.rarity-very-rare{background:#5a4218!important;border-color:#e4b861!important;color:#fff1ce!important}
+.rarity-border-common{border-left-color:#4a7ca3}
+.rarity-border-uncommon{border-left-color:#8089dd}
+.rarity-border-rare{border-left-color:#bf8ee1}
+.rarity-border-very-rare{border-left-color:#e4b861}
+.inventory-manager{min-height:280px;overflow:auto;border:1px solid rgba(74,119,122,.58);border-radius:12px;padding:10px;background:linear-gradient(180deg,#071014,#091418)}
+.inventory-item{display:flex;justify-content:space-between;gap:10px;align-items:center;padding:8px;border-bottom:1px solid rgba(214,173,86,.12);border-left:4px solid transparent}
+.inventory-item:hover{background:rgba(255,255,255,.03)}
+.inventory-meta{display:flex;flex-direction:column;gap:4px;min-width:0}
+.inventory-actions{display:flex;gap:6px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
+.inventory-count{font-weight:800;color:var(--gold2)}
+.mini{width:auto;padding:6px 10px;font-size:.82rem}
+.stretch-card{display:flex;flex-direction:column;max-height:700px}
+.stretch-card .fill-panel{flex:1;max-height:420px;overflow:auto}
+.selected-item{outline:1px solid var(--gold2);background:rgba(214,173,86,.08)}
+</style>
+</head>
+<body>
+<header>
+  <h1>Skyrim Alchemy Tool</h1>
+  <p class="subtitle">SQLite-backed version. Character discoveries are saved on the server database, not browser localStorage.</p>
+</header>
+<main>
+  <div class="grid">
+    <section class="card span4">
+      <h2>Filters</h2>
+      <label>Search ingredient</label>
+      <input id="searchBox" placeholder="Type to filter...">
+      <label>Game / DLC / Creation</label>
+      <select id="dlcFilter"></select>
+      <div class="row">
+        <div>
+          <label>Alchemy skill</label>
+          <input id="alchemySkill" type="number" min="15" max="100" value="15">
+        </div>
+        <div>
+          <label>Sort results by</label>
+          <select id="sortBy">
+            <option value="discovery">Discovery usefulness (rarity-aware)</option>
+            <option value="value">Value</option>
+            <option value="effects">Number of effects</option>
+            <option value="alpha">Alphabetical</option>
+          </select>
+        </div>
+      </div>
+      <p class="small">Estimated value - not exact in-game price.</p>
+      <div class="legend">
+        <span class="pill rarity-badge rarity-common">Common</span>
+        <span class="pill rarity-badge rarity-uncommon">Uncommon</span>
+        <span class="pill rarity-badge rarity-rare">Rare</span>
+        <span class="pill rarity-badge rarity-very-rare">Very Rare</span>
+      </div>
+    </section>
+
+    <section class="card span8">
+      <h2>Characters</h2>
+      <p class="small">Add, search, delete, and select the active character. Created recipes write discovered ingredient/effect pairs into SQLite.</p>
+      <div class="row">
+        <div>
+          <label>Search characters</label>
+          <input id="characterSearch" placeholder="Search name">
+        </div>
+        <div>
+          <label>Add character</label>
+          <input id="newCharacterName" placeholder="New character name">
+        </div>
+      </div>
+      <div class="row" style="margin-top:10px">
+        <button id="addCharacterBtn">Add character</button>
+        <button id="deleteCharacterBtn">Delete selected character</button>
+      </div>
+      <label>Active character</label>
+      <select id="characterSelect"></select>
+      <div id="characterStatus" class="status">Loading...</div>
+    </section>
+
+    <section class="card span12">
+      <h2>Direct Recipe Check</h2>
+      <div class="row">
+        <div>
+          <label>Ingredient 1</label>
+          <select id="ing1"></select>
+        </div>
+        <div>
+          <label>Ingredient 2</label>
+          <select id="ing2"></select>
+        </div>
+      </div>
+      <label>Ingredient 3 optional</label>
+      <select id="ing3"></select>
+      <div class="row" style="margin-top:10px">
+        <button id="checkBtn">Check selected recipe</button>
+        <button id="showCombosBtn">Show all combos using Ingredient 1</button>
+      </div>
+      <div id="directOutput" class="small" style="margin-top:10px"></div>
+    </section>
+
+    <section class="card span6 stretch-card">
+      <h2>Inventory Discovery Optimizer</h2>
+      <div class="row">
+        <button id="selectFiltered">Select filtered</button>
+        <button id="selectAllInventory">Select all</button>
+      </div>
+      <div class="row" style="margin-top:10px">
+        <button id="clearInventory">Clear inventory</button>
+        <div></div>
+      </div>
+      <div style="margin:10px 0" class="row">
+        <label class="checkline"><input id="includePairs" type="checkbox" checked> 2-ingredient recipes</label>
+        <label class="checkline"><input id="includeTriples" type="checkbox" checked> 3-ingredient recipes</label>
+      </div>
+      <div id="inventoryList" class="inventory fill-panel"></div>
+      <button id="generateInventory" style="margin-top:10px">Generate inventory discovery recipes</button>
+    </section>
+
+    <section class="card span6 stretch-card">
+      <h2>Character Inventory</h2>
+      <p class="small">Track how many of each ingredient the selected character currently owns. Crafted recipes consume one of each listed ingredient.</p>
+      <label>Ingredient</label>
+      <select id="inventoryIngredient"></select>
+      <div class="row">
+        <div>
+          <label>Quantity change</label>
+          <input id="inventoryDelta" type="number" min="1" value="1">
+        </div>
+        <div>
+          <label>Set exact quantity</label>
+          <input id="inventorySetQty" type="number" min="0" value="0">
+        </div>
+      </div>
+      <div class="row" style="margin-top:10px">
+        <button id="addInventoryQty">Add quantity</button>
+        <button id="removeInventoryQty">Remove quantity</button>
+      </div>
+      <div class="row" style="margin-top:10px">
+        <button id="setInventoryQty">Set exact quantity</button>
+        <button id="refreshInventoryBtn">Refresh inventory</button>
+      </div>
+      <div id="inventoryStatus" class="status">Select a character to manage inventory.</div>
+      <div id="characterInventoryList" class="inventory-manager fill-panel" style="margin-top:10px"></div>
+    </section>
+
+    <section class="card span6">
+      <h2>Known Effects</h2>
+      <p class="small">Green effects are known for the selected character. Red effects are still outstanding.</p>
+      <div id="knownProgress" class="status">Select a character to view discovery progress.</div>
+      <div class="row">
+        <button id="markFirstKnown">Mark first effect known</button>
+        <button id="clearClientKnown">Refresh from database</button>
+      </div>
+      <div id="knownList" style="max-height:390px;overflow:auto;margin-top:10px"></div>
+    </section>
+
+    <section class="card span6">
+      <h2>Catch Up Known Effects</h2>
+      <p class="small">Backfill discoveries your character already learned in-game without creating recipes here first.</p>
+      <label>Ingredient</label>
+      <select id="manualIngredient"></select>
+      <div id="manualEffectList" class="effect-grid"></div>
+      <div class="row" style="margin-top:10px">
+        <button id="markSelectedKnown">Mark selected known</button>
+        <button id="removeSelectedKnown">Remove selected known</button>
+      </div>
+      <div class="row" style="margin-top:10px">
+        <button id="selectAllManualEffects">Select all four</button>
+        <button id="clearManualEffects">Clear selection</button>
+      </div>
+      <div id="manualKnownStatus" class="status">Select a character and ingredient.</div>
+    </section>
+
+    <section class="card span12">
+      <h2>Results</h2>
+      <div class="stats" id="stats"></div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Ingredients Used</th>
+              <th>Type</th>
+              <th>Effects Produced</th>
+              <th>New Discoveries</th>
+              <th>Estimated Value</th>
+              <th>Source</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="resultsBody"></tbody>
+        </table>
+      </div>
+      <div id="resultsFooter" class="status" style="display:none"></div>
+      <button id="showMoreResultsBtn" style="display:none;margin-top:10px">Show more results</button>
+    </section>
+
+    <section class="card span12">
+      <details>
+        <summary>Data Validation Report</summary>
+        <div id="validationReport"></div>
+      </details>
+    </section>
+  </div>
+</main>
+<script>
+const $ = id => document.getElementById(id);
+let INGREDIENTS = [];
+let known = {};
+let inventory = {};
+let selectedInventoryNames = new Set();
+let activeCharacterId = null;
+let currentResults = [];
+let currentResultsContext = {type: "manual"};
+let ingredientByName = {};
+let pairEffectsByKey = {};
+let visibleResultsCount = 0;
+const RESULTS_PAGE_SIZE = 200;
+const SOURCE_ORDER = [
+  "Skyrim",
+  "Skyrim Quest",
+  "Dawnguard",
+  "Hearthfire",
+  "Dragonborn",
+  "_ResourcePack.esl",
+  "Bittercup",
+  "Fishing",
+  "Forgotten Seasons",
+  "Goblins",
+  "Plague of the Dead",
+  "Rare Curios",
+  "Saints & Seducers",
+  "Spell Knight Armor",
+  "The Cause",
+];
+const POSITIVE = new Set(["Cure Disease","Fortify Alteration","Fortify Barter","Fortify Block","Fortify Carry Weight","Fortify Conjuration","Fortify Destruction","Fortify Enchanting","Fortify Health","Fortify Heavy Armor","Fortify Illusion","Fortify Light Armor","Fortify Lockpicking","Fortify Magicka","Fortify Marksman","Fortify One-handed","Fortify Pickpocket","Fortify Restoration","Fortify Smithing","Fortify Sneak","Fortify Stamina","Fortify Two-handed","Invisibility","Paralysis","Regenerate Health","Regenerate Magicka","Regenerate Stamina","Resist Fire","Resist Frost","Resist Magic","Resist Poison","Resist Shock","Restore Health","Restore Magicka","Restore Stamina","Waterbreathing"]);
+const NEGATIVE = new Set(["Damage Health","Damage Magicka","Damage Magicka Regen","Damage Stamina","Damage Stamina Regen","Fear","Frenzy","Lingering Damage Health","Lingering Damage Magicka","Lingering Damage Stamina","Ravage Health","Ravage Magicka","Ravage Stamina","Slow","Weakness to Fire","Weakness to Frost","Weakness to Magic","Weakness to Poison","Weakness to Shock"]);
+const BASE_VALUE = {Paralysis:160,Invisibility:140,Slow:120,"Damage Magicka Regen":105,"Fortify Carry Weight":95,Waterbreathing:90,"Damage Health":55,"Ravage Health":50,"Lingering Damage Health":65,"Fortify Health":55,"Fortify Magicka":55,"Regenerate Magicka":50};
+
+async function api(path, opts = {}) {
+  const res = await fetch(path, {headers: {"Content-Type": "application/json"}, ...opts});
+  if (!res.ok) {
+    throw new Error(await res.text());
+  }
+  return res.json();
+}
+
+function pairKey(leftName, rightName) {
+  return leftName < rightName ? `${leftName}|${rightName}` : `${rightName}|${leftName}`;
+}
+
+function buildIngredientIndexes() {
+  ingredientByName = Object.fromEntries(INGREDIENTS.map(ingredient => [
+    ingredient.name,
+    {...ingredient, effectSet: new Set(ingredient.effects)},
+  ]));
+  pairEffectsByKey = {};
+  for (let i = 0; i < INGREDIENTS.length; i += 1) {
+    for (let j = i + 1; j < INGREDIENTS.length; j += 1) {
+      const left = ingredientByName[INGREDIENTS[i].name];
+      const right = ingredientByName[INGREDIENTS[j].name];
+      const sharedEffects = left.effects.filter(effect => right.effectSet.has(effect));
+      if (sharedEffects.length) {
+        pairEffectsByKey[pairKey(left.name, right.name)] = sharedEffects;
+      }
+    }
+  }
+}
+
+function filteredIngredients() {
+  const q = $("searchBox").value.toLowerCase();
+  const source = $("dlcFilter").value;
+  return INGREDIENTS.filter(i => (source === "All" || i.source === source) && i.name.toLowerCase().includes(q));
+}
+
+function populateSourceFilter() {
+  const old = $("dlcFilter").value || "All";
+  const sources = [...new Set(INGREDIENTS.map(ingredient => ingredient.source))].sort((a, b) => {
+    const aIdx = SOURCE_ORDER.indexOf(a);
+    const bIdx = SOURCE_ORDER.indexOf(b);
+    if (aIdx !== -1 || bIdx !== -1) {
+      return (aIdx === -1 ? SOURCE_ORDER.length : aIdx) - (bIdx === -1 ? SOURCE_ORDER.length : bIdx);
+    }
+    return a.localeCompare(b);
+  });
+  $("dlcFilter").innerHTML = '<option value="All">All</option>' + sources.map(source => `<option value="${source}">${source}</option>`).join("");
+  if ([...$("dlcFilter").options].some(option => option.value === old)) {
+    $("dlcFilter").value = old;
+  }
+}
+
+function fillSelect(select, includeBlank = false) {
+  fillSelectFromItems(select, filteredIngredients(), includeBlank);
+}
+
+function fillSelectFromItems(select, items, includeBlank = false) {
+  const old = select.value;
+  select.innerHTML = "";
+  if (includeBlank) {
+    select.add(new Option("— none —", ""));
+  }
+  for (const ingredient of items) {
+    select.add(new Option(ingredient.name, ingredient.name));
+  }
+  if ([...select.options].some(option => option.value === old)) {
+    select.value = old;
+  }
+}
+
+function syncDirectRecipeOptions(changedId = "") {
+  const values = {
+    ing1: $("ing1").value,
+    ing2: $("ing2").value,
+    ing3: $("ing3").value,
+  };
+  const selects = ["ing1", "ing2", "ing3"];
+  for (const id of selects) {
+    const select = $(id);
+    const currentValue = values[id];
+    const availableItems = filteredIngredients().filter(ingredient => {
+      if (ingredient.name === currentValue) {
+        return true;
+      }
+      return !selects.some(otherId => otherId !== id && values[otherId] === ingredient.name);
+    });
+    fillSelectFromItems(select, availableItems, id === "ing3");
+  }
+  if (changedId) {
+    const changed = $(changedId);
+    if (!changed.value && values[changedId]) {
+      changed.value = values[changedId];
+    }
+  }
+}
+
+function refreshIngredientUI() {
+  syncDirectRecipeOptions();
+  fillSelectFromItems($("manualIngredient"), INGREDIENTS);
+  fillSelectFromItems($("inventoryIngredient"), INGREDIENTS);
+  renderInventory();
+  renderCharacterInventory();
+  renderKnownList();
+  renderManualKnownEffects();
+}
+
+function effectClass(ingredient, effect) {
+  return known[ingredient.name]?.has(effect) ? "known" : "unknown";
+}
+
+function rarityClass(ingredient) {
+  return `rarity-${ingredient.rarity.replaceAll("_", "-")}`;
+}
+
+function rarityBorderClass(ingredient) {
+  return `rarity-border-${ingredient.rarity.replaceAll("_", "-")}`;
+}
+
+function rarityBadge(ingredient) {
+  return `<span class="pill rarity-badge ${rarityClass(ingredient)}" title="${ingredient.rarity_note}">${ingredient.rarity_label}</span>`;
+}
+
+function selectedManualEffects() {
+  return [...document.querySelectorAll(".manual-eff:checked")].map(node => node.value);
+}
+
+function recipeFrom(names) {
+  if (new Set(names).size !== names.length) {
+    return null;
+  }
+  const items = names.map(name => ingredientByName[name]).filter(Boolean);
+  if (items.length < 2 || items.length !== names.length) {
+    return null;
+  }
+  let effects = pairEffectsByKey[pairKey(items[0].name, items[1].name)] || [];
+  if (items.length === 3) {
+    const combinedEffects = new Set(effects);
+    for (const effect of pairEffectsByKey[pairKey(items[0].name, items[2].name)] || []) {
+      combinedEffects.add(effect);
+    }
+    for (const effect of pairEffectsByKey[pairKey(items[1].name, items[2].name)] || []) {
+      combinedEffects.add(effect);
+    }
+    effects = [...combinedEffects];
+  }
+  if (!effects.length) {
+    return null;
+  }
+  const pos = effects.filter(effect => POSITIVE.has(effect)).length;
+  const neg = effects.filter(effect => NEGATIVE.has(effect)).length;
+  const type = pos > neg ? "Potion" : neg > pos ? "Poison" : "Mixed";
+  const discoveries = [];
+  const discoveryCounts = {};
+  const discoveryRanks = [];
+  for (const item of items) {
+    for (const effect of effects) {
+      if (item.effects.includes(effect) && !known[item.name]?.has(effect)) {
+        discoveries.push(`${item.name}: ${effect}`);
+        discoveryCounts[item.name] = (discoveryCounts[item.name] || 0) + 1;
+      }
+    }
+  }
+  const discoveryPriority = items.reduce((score, item) => {
+    const discoveriesForItem = discoveryCounts[item.name] || 0;
+    if (!discoveriesForItem) {
+      return score;
+    }
+    const rarityWeight = item.rarity_rank + 1;
+    discoveryRanks.push(item.rarity_rank);
+    return score + discoveriesForItem * discoveriesForItem * rarityWeight;
+  }, 0);
+  const highestDiscoveredRarity = discoveryRanks.length ? Math.max(...discoveryRanks) : -1;
+  const rarityWastePenalty = items.reduce((penalty, item) => {
+    if ((discoveryCounts[item.name] || 0) > 0) {
+      return penalty;
+    }
+    if (item.rarity_rank <= highestDiscoveredRarity) {
+      return penalty;
+    }
+    const rarityGap = item.rarity_rank - highestDiscoveredRarity;
+    return penalty + (item.rarity_rank + 1) * (rarityGap + 1) * 10;
+  }, 0);
+  const skill = Number($("alchemySkill").value || 15);
+  const mult = 1 + (skill - 15) / 120;
+  const value = Math.round(effects.reduce((sum, effect) => sum + (BASE_VALUE[effect] || 18), 0) * mult * (items.length === 3 ? 1.15 : 1));
+  return {items, effects, type, discoveries, discoveryPriority: discoveryPriority - rarityWastePenalty, value};
+}
+
+function combos(arr, k) {
+  const out = [];
+  function rec(start, picked) {
+    if (picked.length === k) {
+      out.push([...picked]);
+      return;
+    }
+    for (let i = start; i < arr.length; i += 1) {
+      picked.push(arr[i]);
+      rec(i + 1, picked);
+      picked.pop();
+    }
+  }
+  rec(0, []);
+  return out;
+}
+
+function generateTripleRecipes(names) {
+  const results = [];
+  for (let i = 0; i < names.length; i += 1) {
+    for (let j = i + 1; j < names.length; j += 1) {
+      if (!pairEffectsByKey[pairKey(names[i], names[j])]) {
+        continue;
+      }
+      for (let k = j + 1; k < names.length; k += 1) {
+        if (!pairEffectsByKey[pairKey(names[i], names[k])] && !pairEffectsByKey[pairKey(names[j], names[k])]) {
+          continue;
+        }
+        const result = recipeFrom([names[i], names[j], names[k]]);
+        if (result) {
+          results.push(result);
+        }
+      }
+    }
+  }
+  return results;
+}
+
+function buildInventoryResults() {
+  const names = [...selectedInventoryNames];
+  const results = [];
+  if ($("includePairs").checked) {
+    for (const combo of combos(names, 2)) {
+      const result = recipeFrom(combo);
+      if (result) {
+        results.push(result);
+      }
+    }
+  }
+  if ($("includeTriples").checked) {
+    results.push(...generateTripleRecipes(names));
+  }
+  return results;
+}
+
+function sortResults(results) {
+  const by = $("sortBy").value;
+  return results.sort((a, b) => by === "value"
+    ? b.value - a.value
+    : by === "effects"
+      ? b.effects.length - a.effects.length
+      : by === "discovery"
+        ? b.discoveryPriority - a.discoveryPriority || b.value - a.value || a.items.length - b.items.length
+        : a.items.map(i => i.name).join(",").localeCompare(b.items.map(i => i.name).join(",")));
+}
+
+function rerenderCurrentResults() {
+  if (currentResultsContext.type === "inventory") {
+    renderResults(buildInventoryResults());
+    return;
+  }
+  if (currentResults.length) {
+    renderResults(currentResults.map(result => recipeFrom(result.items.map(item => item.name))).filter(Boolean));
+  }
+}
+
+function inventoryZeroedOut(previousInventory) {
+  return Object.entries(previousInventory).some(([name, quantity]) => quantity > 0 && (inventory[name] ?? 0) === 0);
+}
+
+function renderVisibleResults() {
+  const visibleResults = currentResults.slice(0, visibleResultsCount);
+  $("resultsBody").innerHTML = visibleResults.map((result, idx) => {
+    const sortedItems = [...result.items].sort((a, b) => a.name.localeCompare(b.name));
+    return `<tr class="${result.value >= 100 ? "high" : ""} ${result.discoveries.length ? "discover" : ""}"><td>${sortedItems.map(i => `<div class="ingredient-name"><b>${i.name}</b>${rarityBadge(i)}</div>`).join("")}</td><td>${result.type}</td><td>${result.effects.map(effect => `<span class="pill">${effect}</span>`).join(" ")}</td><td>${result.discoveries.length ? result.discoveries.map(discovery => `<span class="pill new">${discovery}</span>`).join(" ") : '<span class="small">None</span>'}</td><td>${result.value} gold<br><span class="small">Estimated value - not exact in-game price</span></td><td>${sortedItems.map(i => `${i.name}: ${i.source}<br><span class="small">${i.rarity_label}</span>`).join("<br>")}</td><td><button class="tinybtn" onclick="markRecipeCreated(${idx})">Created</button></td></tr>`;
+  }).join("");
+  if (currentResults.length > visibleResultsCount) {
+    $("resultsFooter").style.display = "";
+    $("resultsFooter").textContent = `Showing ${visibleResultsCount} of ${currentResults.length} results.`;
+    $("showMoreResultsBtn").style.display = "";
+  } else {
+    $("resultsFooter").style.display = currentResults.length ? "" : "none";
+    $("resultsFooter").textContent = currentResults.length ? `Showing all ${currentResults.length} results.` : "";
+    $("showMoreResultsBtn").style.display = "none";
+  }
+}
+
+function renderResults(results) {
+  currentResults = sortResults(results);
+  visibleResultsCount = Math.min(currentResults.length, RESULTS_PAGE_SIZE);
+  $("stats").innerHTML = `<div class="stat"><b>${results.length}</b>Valid recipes</div><div class="stat"><b>${results.filter(r => r.discoveries.length).length}</b>Discovery recipes</div><div class="stat"><b>${results[0]?.value || 0}</b>Top value</div><div class="stat"><b>${results.filter(r => r.effects.length >= 2).length}</b>Multi-effect</div>`;
+  renderVisibleResults();
+}
+
+async function markRecipeCreated(idx) {
+  const result = currentResults[idx];
+  if (!activeCharacterId) {
+    alert("Select or create a character first.");
+    return;
+  }
+  await api(`/api/characters/${activeCharacterId}/created-recipes`, {
+    method: "POST",
+    body: JSON.stringify({ingredient_names: result.items.map(i => i.name), effect_names: result.effects}),
+  });
+  await loadKnown();
+  await loadInventory();
+  renderCharacterInventory();
+  renderInventory();
+  renderKnownList();
+  renderManualKnownEffects();
+  rerenderCurrentResults();
+}
+
+function renderInventory() {
+  const ownedNames = new Set(Object.entries(inventory).filter(([, quantity]) => quantity > 0).map(([name]) => name));
+  selectedInventoryNames = new Set([...selectedInventoryNames].filter(name => ownedNames.has(name)));
+  const items = filteredIngredients().filter(ingredient => ownedNames.has(ingredient.name));
+  $("inventoryList").innerHTML = items.length
+    ? items.map(ingredient => `<label class="checkline ${rarityBorderClass(ingredient)}"><input class="inv" type="checkbox" value="${ingredient.name}" ${selectedInventoryNames.has(ingredient.name) ? "checked" : ""}> ${ingredient.name} ${rarityBadge(ingredient)} <span class="small">${ingredient.source} · Qty ${inventory[ingredient.name]}</span></label>`).join("")
+    : '<div class="small">No tracked ingredients match the current filter. Add some quantities in the Character Inventory card.</div>';
+}
+
+function renderCharacterInventory() {
+  const items = Object.entries(inventory)
+    .filter(([, quantity]) => quantity > 0)
+    .map(([name, quantity]) => ({...INGREDIENTS.find(ingredient => ingredient.name === name), quantity}))
+    .sort((a, b) => a.name.localeCompare(b.name));
+  $("inventoryStatus").textContent = activeCharacterId
+    ? `Tracked ingredients: ${items.length}. Total items: ${items.reduce((sum, item) => sum + item.quantity, 0)}.`
+    : "Select a character to manage inventory.";
+  $("characterInventoryList").innerHTML = items.length
+    ? items.map(item => `<div class="inventory-item ${rarityBorderClass(item)} ${$("inventoryIngredient").value === item.name ? "selected-item" : ""}" data-inventory-name="${item.name}"><div class="inventory-meta"><div class="ingredient-name"><b>${item.name}</b>${rarityBadge(item)}</div><span class="small">${item.source}</span></div><div class="inventory-actions"><span class="inventory-count">x${item.quantity}</span><button class="mini" onclick="adjustInventory('${item.name.replaceAll("'", "\\'")}',1); event.stopPropagation();">+1</button><button class="mini" onclick="adjustInventory('${item.name.replaceAll("'", "\\'")}',-1); event.stopPropagation();">-1</button></div></div>`).join("")
+    : '<div class="small">No ingredients tracked yet for this character.</div>';
+  $("inventorySetQty").value = inventory[$("inventoryIngredient").value] ?? 0;
+}
+
+function renderKnownList() {
+  const totalEffects = INGREDIENTS.length * 4;
+  const knownEffectsCount = INGREDIENTS.reduce((sum, ingredient) => sum + (known[ingredient.name]?.size || 0), 0);
+  const knownIngredientsCount = INGREDIENTS.filter(ingredient => (known[ingredient.name]?.size || 0) === 4).length;
+  const completion = totalEffects ? Math.round((knownEffectsCount / totalEffects) * 1000) / 10 : 0;
+  $("knownProgress").textContent = activeCharacterId
+    ? `Discovery progress: ${knownEffectsCount}/${totalEffects} effects known (${completion}%). Fully solved ingredients: ${knownIngredientsCount}/${INGREDIENTS.length}.`
+    : "Select a character to view discovery progress.";
+  $("knownList").innerHTML = INGREDIENTS.map(ingredient => `<div class="ingredient-row ${rarityBorderClass(ingredient)}"><div class="ingredient-name"><b>${ingredient.name}</b>${rarityBadge(ingredient)}<span class="small">${ingredient.source}</span></div>${ingredient.effects.map(effect => `<span class="pill ${effectClass(ingredient, effect)}">${effect}</span>`).join(" ")}</div>`).join("");
+}
+
+function renderManualKnownEffects() {
+  const ingredient = INGREDIENTS.find(i => i.name === $("manualIngredient").value) || filteredIngredients()[0] || INGREDIENTS[0];
+  if (!ingredient) {
+    $("manualEffectList").innerHTML = "";
+    $("manualKnownStatus").textContent = "No ingredients available.";
+    return;
+  }
+  if ($("manualIngredient").value !== ingredient.name) {
+    $("manualIngredient").value = ingredient.name;
+  }
+  const selected = new Set(selectedManualEffects());
+  $("manualEffectList").innerHTML = ingredient.effects.map(effect => `<label class="effect-chip ${effectClass(ingredient, effect)}"><input class="manual-eff" type="checkbox" value="${effect}" ${selected.has(effect) ? "checked" : ""}><span>${effect}</span></label>`).join("");
+  const knownCount = ingredient.effects.filter(effect => known[ingredient.name]?.has(effect)).length;
+  $("manualKnownStatus").textContent = activeCharacterId
+    ? `${ingredient.name}: ${knownCount}/4 effects known for this character.`
+    : "Select a character and ingredient.";
+}
+
+async function loadKnown() {
+  known = {};
+  if (!activeCharacterId) {
+    return;
+  }
+  const data = await api(`/api/characters/${activeCharacterId}/known-effects`);
+  for (const row of data.known_effects) {
+    known[row.ingredient] ??= new Set();
+    known[row.ingredient].add(row.effect);
+  }
+}
+
+async function loadInventory() {
+  inventory = {};
+  if (!activeCharacterId) {
+    return;
+  }
+  const data = await api(`/api/characters/${activeCharacterId}/inventory`);
+  for (const item of data.inventory) {
+    inventory[item.name] = item.quantity;
+  }
+}
+
+async function loadCharacters() {
+  const data = await api("/api/characters?search=" + encodeURIComponent($("characterSearch").value));
+  const old = $("characterSelect").value;
+  $("characterSelect").innerHTML = '<option value="">— select character —</option>' + data.characters.map(character => `<option value="${character.id}">${character.name}</option>`).join("");
+  if ([...$("characterSelect").options].some(option => option.value === old)) {
+    $("characterSelect").value = old;
+  }
+  activeCharacterId = $("characterSelect").value || null;
+  $("characterStatus").textContent = activeCharacterId ? `Active character ID ${activeCharacterId}` : "No character selected.";
+  await loadKnown();
+  await loadInventory();
+  renderCharacterInventory();
+  renderInventory();
+  renderKnownList();
+  renderManualKnownEffects();
+}
+
+function validate() {
+  const bad = INGREDIENTS.filter(ingredient => !Array.isArray(ingredient.effects) || ingredient.effects.length !== 4);
+  $("validationReport").innerHTML = `<p><b>Total ingredients:</b> ${INGREDIENTS.length}</p><p><b>Each ingredient has 4 effects:</b> ${bad.length === 0 ? "Yes" : "No"}</p><p><b>Inconsistencies:</b> ${bad.length}</p><p>Data verified against UESP; seeded into SQLite ingredient/effect relationship tables.</p>`;
+}
+
+async function updateManualKnown(method) {
+  if (!activeCharacterId) {
+    alert("Select a character first.");
+    return;
+  }
+  const effectNames = selectedManualEffects();
+  if (!effectNames.length) {
+    alert("Select at least one effect.");
+    return;
+  }
+  const path = `/api/characters/${activeCharacterId}/known-effects`;
+  const body = JSON.stringify({ingredient_name: $("manualIngredient").value, effect_names: effectNames});
+  if (method === "POST") {
+    await api(path, {method, body});
+  } else {
+    const res = await fetch(path, {method, headers: {"Content-Type": "application/json"}, body});
+    if (!res.ok) {
+      throw new Error(await res.text());
+    }
+  }
+  await loadKnown();
+  renderKnownList();
+  renderManualKnownEffects();
+  rerenderCurrentResults();
+}
+
+async function adjustInventory(name, delta) {
+  if (!activeCharacterId) {
+    alert("Select a character first.");
+    return;
+  }
+  try {
+    const previousInventory = {...inventory};
+    await api(`/api/characters/${activeCharacterId}/inventory/adjust`, {
+      method: "POST",
+      body: JSON.stringify({ingredient_name: name, delta}),
+    });
+    await loadInventory();
+    renderCharacterInventory();
+    renderInventory();
+    if (inventoryZeroedOut(previousInventory)) {
+      rerenderCurrentResults();
+    }
+  } catch (error) {
+    alert(error.message);
+  }
+}
+
+async function setInventoryQuantity(name, quantity) {
+  if (!activeCharacterId) {
+    alert("Select a character first.");
+    return;
+  }
+  const previousInventory = {...inventory};
+  await api(`/api/characters/${activeCharacterId}/inventory`, {
+    method: "PUT",
+    body: JSON.stringify({ingredient_name: name, quantity}),
+  });
+  await loadInventory();
+  renderCharacterInventory();
+  renderInventory();
+  if (inventoryZeroedOut(previousInventory)) {
+    rerenderCurrentResults();
+  }
+}
+
+async function init() {
+  INGREDIENTS = (await api("/api/ingredients")).ingredients;
+  buildIngredientIndexes();
+  populateSourceFilter();
+  validate();
+  refreshIngredientUI();
+  await loadCharacters();
+}
+
+$("searchBox").addEventListener("input", refreshIngredientUI);
+$("dlcFilter").addEventListener("change", refreshIngredientUI);
+$("sortBy").addEventListener("change", () => renderResults(currentResults));
+$("manualIngredient").addEventListener("change", renderManualKnownEffects);
+$("ing1").addEventListener("change", () => syncDirectRecipeOptions("ing1"));
+$("ing2").addEventListener("change", () => syncDirectRecipeOptions("ing2"));
+$("ing3").addEventListener("change", () => syncDirectRecipeOptions("ing3"));
+$("inventoryIngredient").addEventListener("change", () => {
+  $("inventorySetQty").value = inventory[$("inventoryIngredient").value] ?? 0;
+  renderCharacterInventory();
+});
+
+$("checkBtn").onclick = () => {
+  const names = [$("ing1").value, $("ing2").value, $("ing3").value].filter(Boolean);
+  const result = recipeFrom(names);
+  currentResultsContext = {type: "direct"};
+  renderResults(result ? [result] : []);
+  $("directOutput").textContent = result ? "Recipe found." : "No valid recipe: at least two ingredients must share an effect.";
+};
+
+$("showCombosBtn").onclick = () => {
+  const first = $("ing1").value;
+  const others = INGREDIENTS.map(i => i.name).filter(name => name !== first);
+  const results = [];
+  for (const combo of combos(others, 1)) {
+    const result = recipeFrom([first, ...combo]);
+    if (result) {
+      results.push(result);
+    }
+  }
+  for (const combo of combos(others, 2)) {
+    const result = recipeFrom([first, ...combo]);
+    if (result) {
+      results.push(result);
+    }
+  }
+  currentResultsContext = {type: "combos", first};
+  renderResults(results);
+};
+
+$("selectFiltered").onclick = () => {
+  filteredIngredients().forEach(ingredient => {
+    if ((inventory[ingredient.name] ?? 0) > 0) {
+      selectedInventoryNames.add(ingredient.name);
+    }
+  });
+  renderInventory();
+};
+
+$("selectAllInventory").onclick = () => {
+  selectedInventoryNames = new Set(Object.entries(inventory).filter(([, quantity]) => quantity > 0).map(([name]) => name));
+  renderInventory();
+};
+
+$("clearInventory").onclick = () => {
+  selectedInventoryNames.clear();
+  renderInventory();
+};
+
+$("generateInventory").onclick = () => {
+  currentResultsContext = {type: "inventory"};
+  renderResults(buildInventoryResults());
+};
+
+$("inventoryList").addEventListener("change", event => {
+  const target = event.target;
+  if (!(target instanceof HTMLInputElement) || !target.classList.contains("inv")) {
+    return;
+  }
+  if (target.checked) {
+    selectedInventoryNames.add(target.value);
+  } else {
+    selectedInventoryNames.delete(target.value);
+  }
+});
+
+$("characterInventoryList").addEventListener("click", event => {
+  const itemRow = event.target.closest("[data-inventory-name]");
+  if (!itemRow) {
+    return;
+  }
+  const name = itemRow.getAttribute("data-inventory-name");
+  $("inventoryIngredient").value = name;
+  $("inventorySetQty").value = inventory[name] ?? 0;
+  $("inventoryDelta").value = 1;
+  renderCharacterInventory();
+});
+
+$("showMoreResultsBtn").onclick = () => {
+  visibleResultsCount = Math.min(currentResults.length, visibleResultsCount + RESULTS_PAGE_SIZE);
+  renderVisibleResults();
+};
+
+$("addCharacterBtn").onclick = async () => {
+  const name = $("newCharacterName").value.trim();
+  if (!name) {
+    return;
+  }
+  await api("/api/characters", {method: "POST", body: JSON.stringify({name})});
+  $("newCharacterName").value = "";
+  await loadCharacters();
+};
+
+$("deleteCharacterBtn").onclick = async () => {
+  const id = $("characterSelect").value;
+  if (!id) {
+    return;
+  }
+  if (confirm("Delete this character and discoveries?")) {
+    await api("/api/characters/" + id, {method: "DELETE"});
+    await loadCharacters();
+  }
+};
+
+$("characterSearch").addEventListener("input", loadCharacters);
+$("characterSelect").addEventListener("change", async () => {
+  activeCharacterId = $("characterSelect").value || null;
+  $("characterStatus").textContent = activeCharacterId ? `Active character ID ${activeCharacterId}` : "No character selected.";
+  await loadKnown();
+  await loadInventory();
+  renderCharacterInventory();
+  renderInventory();
+  renderKnownList();
+  renderManualKnownEffects();
+  rerenderCurrentResults();
+});
+
+$("markFirstKnown").onclick = async () => {
+  if (!activeCharacterId) {
+    alert("Select a character first.");
+    return;
+  }
+  for (const ingredient of INGREDIENTS) {
+    await api(`/api/characters/${activeCharacterId}/created-recipes`, {
+      method: "POST",
+      body: JSON.stringify({ingredient_names: [ingredient.name, ingredient.name], effect_names: [ingredient.effects[0]], consume_inventory: false}),
+    }).catch(() => {});
+  }
+  await loadKnown();
+  await loadInventory();
+  renderCharacterInventory();
+  renderInventory();
+  renderKnownList();
+  renderManualKnownEffects();
+  rerenderCurrentResults();
+};
+
+$("clearClientKnown").onclick = async () => {
+  await loadKnown();
+  renderKnownList();
+  renderManualKnownEffects();
+  rerenderCurrentResults();
+};
+
+$("addInventoryQty").onclick = async () => {
+  const delta = Number($("inventoryDelta").value || 0);
+  if (delta <= 0) {
+    alert("Quantity change must be at least 1.");
+    return;
+  }
+  await adjustInventory($("inventoryIngredient").value, delta);
+  $("inventorySetQty").value = inventory[$("inventoryIngredient").value] ?? 0;
+};
+
+$("removeInventoryQty").onclick = async () => {
+  const delta = Number($("inventoryDelta").value || 0);
+  if (delta <= 0) {
+    alert("Quantity change must be at least 1.");
+    return;
+  }
+  await adjustInventory($("inventoryIngredient").value, -delta);
+  $("inventorySetQty").value = inventory[$("inventoryIngredient").value] ?? 0;
+};
+
+$("setInventoryQty").onclick = async () => {
+  const quantity = Number($("inventorySetQty").value || 0);
+  if (quantity < 0) {
+    alert("Quantity cannot be negative.");
+    return;
+  }
+  try {
+    await setInventoryQuantity($("inventoryIngredient").value, quantity);
+  } catch (error) {
+    alert(error.message);
+  }
+};
+
+$("refreshInventoryBtn").onclick = async () => {
+  await loadInventory();
+  renderCharacterInventory();
+  renderInventory();
+  rerenderCurrentResults();
+};
+
+$("selectAllManualEffects").onclick = () => {
+  document.querySelectorAll(".manual-eff").forEach(node => {
+    node.checked = true;
+  });
+};
+
+$("clearManualEffects").onclick = () => {
+  document.querySelectorAll(".manual-eff").forEach(node => {
+    node.checked = false;
+  });
+};
+
+$("markSelectedKnown").onclick = async () => {
+  try {
+    await updateManualKnown("POST");
+  } catch (error) {
+    alert(error.message);
+  }
+};
+
+$("removeSelectedKnown").onclick = async () => {
+  try {
+    await updateManualKnown("DELETE");
+  } catch (error) {
+    alert(error.message);
+  }
+};
+
+init().catch(error => alert(error.message));
+</script>
+</body>
+</html>

@@ -1,0 +1,1892 @@
+[
+  {
+    "name": "Abecean Longfin",
+    "source": "Skyrim",
+    "effects": [
+      "Weakness to Frost",
+      "Fortify Sneak",
+      "Weakness to Poison",
+      "Fortify Restoration"
+    ]
+  },
+  {
+    "name": "Alocasia Fruit",
+    "source": "Rare Curios",
+    "effects": [
+      "Regenerate Stamina",
+      "Light",
+      "Ravage Magicka",
+      "Regenerate Health"
+    ]
+  },
+  {
+    "name": "Aloe Vera Leaves",
+    "source": "_ResourcePack.esl",
+    "effects": [
+      "Restore Health",
+      "Restore Stamina",
+      "Damage Magicka",
+      "Invisibility"
+    ]
+  },
+  {
+    "name": "Ambrosia",
+    "source": "Rare Curios",
+    "effects": [
+      "Restore Health",
+      "Regenerate Health",
+      "Fortify Health",
+      "Cure Poison"
+    ]
+  },
+  {
+    "name": "Ancestor Moth Wing",
+    "source": "Dawnguard",
+    "effects": [
+      "Damage Stamina",
+      "Fortify Conjuration",
+      "Damage Magicka Regen",
+      "Fortify Enchanting"
+    ]
+  },
+  {
+    "name": "Angelfish",
+    "source": "Fishing",
+    "effects": [
+      "Regenerate Health",
+      "Resist Fire",
+      "Fortify Marksman",
+      "Waterbreathing"
+    ]
+  },
+  {
+    "name": "Angler Larvae",
+    "source": "Fishing",
+    "effects": [
+      "Lingering Damage Health",
+      "Regenerate Stamina",
+      "Waterbreathing",
+      "Fortify Two-handed"
+    ]
+  },
+  {
+    "name": "Ash Creep Cluster",
+    "source": "Dragonborn",
+    "effects": [
+      "Damage Stamina",
+      "Invisibility",
+      "Resist Fire",
+      "Fortify Destruction"
+    ]
+  },
+  {
+    "name": "Ash Hopper Jelly",
+    "source": "Dragonborn",
+    "effects": [
+      "Restore Health",
+      "Fortify Light Armor",
+      "Resist Shock",
+      "Weakness to Frost"
+    ]
+  },
+  {
+    "name": "Ashen Grass Pod",
+    "source": "Dragonborn",
+    "effects": [
+      "Resist Fire",
+      "Weakness to Shock",
+      "Fortify Lockpicking",
+      "Fortify Sneak"
+    ]
+  },
+  {
+    "name": "Aster Bloom Core",
+    "source": "Rare Curios",
+    "effects": [
+      "Resist Magic",
+      "Fortify Light Armor",
+      "Fortify Block",
+      "Paralysis"
+    ]
+  },
+  {
+    "name": "Bear Claws",
+    "source": "Skyrim",
+    "effects": [
+      "Restore Stamina",
+      "Fortify Health",
+      "Fortify One-handed",
+      "Damage Magicka Regen"
+    ]
+  },
+  {
+    "name": "Bee",
+    "source": "Skyrim",
+    "effects": [
+      "Restore Stamina",
+      "Ravage Stamina",
+      "Regenerate Stamina",
+      "Weakness to Shock"
+    ]
+  },
+  {
+    "name": "Beehive Husk",
+    "source": "Skyrim",
+    "effects": [
+      "Resist Poison",
+      "Fortify Light Armor",
+      "Fortify Sneak",
+      "Fortify Destruction"
+    ]
+  },
+  {
+    "name": "Berit's Ashes",
+    "source": "Skyrim Quest",
+    "effects": [
+      "Damage Stamina",
+      "Resist Fire",
+      "Fortify Conjuration",
+      "Ravage Stamina"
+    ]
+  },
+  {
+    "name": "Bittergreen Petals",
+    "source": "Rare Curios",
+    "effects": [
+      "Lingering Damage Stamina",
+      "Invisibility",
+      "Cure Poison",
+      "Damage Magicka"
+    ]
+  },
+  {
+    "name": "Bleeding Crown",
+    "source": "Skyrim",
+    "effects": [
+      "Weakness to Fire",
+      "Fortify Block",
+      "Weakness to Poison",
+      "Resist Magic"
+    ]
+  },
+  {
+    "name": "Blind Watcher's Eye",
+    "source": "Rare Curios",
+    "effects": [
+      "Light",
+      "Fortify Magicka",
+      "Fortify Alteration",
+      "Spell Absorption"
+    ]
+  },
+  {
+    "name": "Bliss Bug Thorax",
+    "source": "Saints & Seducers",
+    "effects": [
+      "Weakness to Fire",
+      "Resist Fire",
+      "Fortify Heavy Armor",
+      "Fortify Illusion"
+    ]
+  },
+  {
+    "name": "Blister Pod Cap",
+    "source": "Rare Curios",
+    "effects": [
+      "Restore Magicka",
+      "Fortify Magicka",
+      "Night Eye",
+      "Invisibility"
+    ]
+  },
+  {
+    "name": "Blisterwort",
+    "source": "Skyrim",
+    "effects": [
+      "Damage Stamina",
+      "Frenzy",
+      "Restore Health",
+      "Fortify Smithing"
+    ]
+  },
+  {
+    "name": "Bloodgrass",
+    "source": "The Cause",
+    "effects": [
+      "Invisibility",
+      "Resist Poison",
+      "Slow",
+      "Fortify Health"
+    ]
+  },
+  {
+    "name": "Blue Butterfly Wing",
+    "source": "Skyrim",
+    "effects": [
+      "Damage Stamina",
+      "Fortify Conjuration",
+      "Damage Magicka Regen",
+      "Fortify Enchanting"
+    ]
+  },
+  {
+    "name": "Blue Dartwing",
+    "source": "Skyrim",
+    "effects": [
+      "Resist Shock",
+      "Fortify Pickpocket",
+      "Restore Health",
+      "Fear"
+    ]
+  },
+  {
+    "name": "Blue Mountain Flower",
+    "source": "Skyrim",
+    "effects": [
+      "Restore Health",
+      "Fortify Conjuration",
+      "Fortify Health",
+      "Damage Magicka Regen"
+    ]
+  },
+  {
+    "name": "Boar Tusk",
+    "source": "Dragonborn",
+    "effects": [
+      "Fortify Stamina",
+      "Fortify Health",
+      "Fortify Block",
+      "Frenzy"
+    ]
+  },
+  {
+    "name": "Bog Beacon",
+    "source": "Rare Curios",
+    "effects": [
+      "Restore Magicka",
+      "Fortify Heavy Armor",
+      "Fear",
+      "Damage Stamina"
+    ]
+  },
+  {
+    "name": "Bone Meal",
+    "source": "Skyrim",
+    "effects": [
+      "Damage Stamina",
+      "Resist Fire",
+      "Fortify Conjuration",
+      "Ravage Stamina"
+    ]
+  },
+  {
+    "name": "Briar Heart",
+    "source": "Skyrim",
+    "effects": [
+      "Restore Magicka",
+      "Fortify Block",
+      "Paralysis",
+      "Fortify Magicka"
+    ]
+  },
+  {
+    "name": "Bungler's Bane",
+    "source": "Rare Curios",
+    "effects": [
+      "Slow",
+      "Ravage Stamina",
+      "Damage Stamina Regen",
+      "Resist Magic"
+    ]
+  },
+  {
+    "name": "Burnt Spriggan Wood",
+    "source": "Dragonborn",
+    "effects": [
+      "Weakness to Fire",
+      "Fortify Alteration",
+      "Damage Magicka Regen",
+      "Slow"
+    ]
+  },
+  {
+    "name": "Butterfly Wing",
+    "source": "Skyrim",
+    "effects": [
+      "Restore Health",
+      "Fortify Barter",
+      "Lingering Damage Stamina",
+      "Damage Magicka"
+    ]
+  },
+  {
+    "name": "Canis Root",
+    "source": "Skyrim",
+    "effects": [
+      "Damage Stamina",
+      "Fortify One-handed",
+      "Fortify Marksman",
+      "Paralysis"
+    ]
+  },
+  {
+    "name": "Charred Skeever Hide",
+    "source": "Skyrim",
+    "effects": [
+      "Restore Stamina",
+      "Cure Disease",
+      "Resist Poison",
+      "Restore Health"
+    ]
+  },
+  {
+    "name": "Chaurus Eggs",
+    "source": "Skyrim",
+    "effects": [
+      "Weakness to Poison",
+      "Fortify Stamina",
+      "Damage Magicka",
+      "Invisibility"
+    ]
+  },
+  {
+    "name": "Chaurus Hunter Antennae",
+    "source": "Dawnguard",
+    "effects": [
+      "Damage Stamina",
+      "Fortify Conjuration",
+      "Damage Magicka Regen",
+      "Fortify Enchanting"
+    ]
+  },
+  {
+    "name": "Chicken's Egg",
+    "source": "Skyrim",
+    "effects": [
+      "Resist Magic",
+      "Damage Magicka Regen",
+      "Waterbreathing",
+      "Lingering Damage Stamina"
+    ]
+  },
+  {
+    "name": "Chokeberry",
+    "source": "Rare Curios",
+    "effects": [
+      "Damage Health",
+      "Ravage Health",
+      "Lingering Damage Health",
+      "Weakness to Poison"
+    ]
+  },
+  {
+    "name": "Chokeweed",
+    "source": "Rare Curios",
+    "effects": [
+      "Weakness to Frost",
+      "Restore Stamina",
+      "Cure Disease",
+      "Damage Magicka"
+    ]
+  },
+  {
+    "name": "Coda Flower",
+    "source": "Rare Curios",
+    "effects": [
+      "Damage Health",
+      "Lingering Damage Stamina",
+      "Ravage Magicka",
+      "Fortify Carry Weight"
+    ]
+  },
+  {
+    "name": "Comberry",
+    "source": "Rare Curios",
+    "effects": [
+      "Damage Stamina",
+      "Spell Absorption",
+      "Restore Magicka",
+      "Fortify Destruction"
+    ]
+  },
+  {
+    "name": "Congealed Putrescence",
+    "source": "Rare Curios",
+    "effects": [
+      "Ravage Health",
+      "Restore Magicka",
+      "Weakness to Fire",
+      "Fortify Conjuration"
+    ]
+  },
+  {
+    "name": "Corkbulb Root",
+    "source": "Rare Curios",
+    "effects": [
+      "Paralysis",
+      "Restore Health",
+      "Resist Shock",
+      "Fortify Marksman"
+    ]
+  },
+  {
+    "name": "Corrupted Human Heart",
+    "source": "Spell Knight Armor",
+    "effects": [
+      "Damage Health",
+      "Damage Magicka",
+      "Damage Magicka Regen",
+      "Frenzy"
+    ]
+  },
+  {
+    "name": "Creep Cluster",
+    "source": "Skyrim",
+    "effects": [
+      "Restore Magicka",
+      "Damage Stamina Regen",
+      "Fortify Carry Weight",
+      "Weakness to Magic"
+    ]
+  },
+  {
+    "name": "Crimson Nirnroot",
+    "source": "Skyrim",
+    "effects": [
+      "Damage Health",
+      "Damage Stamina",
+      "Invisibility",
+      "Resist Magic"
+    ]
+  },
+  {
+    "name": "Cyrodilic Spadetail",
+    "source": "Skyrim",
+    "effects": [
+      "Damage Stamina",
+      "Fortify Restoration",
+      "Fear",
+      "Ravage Health"
+    ]
+  },
+  {
+    "name": "Daedra Heart",
+    "source": "Skyrim",
+    "effects": [
+      "Restore Health",
+      "Damage Stamina Regen",
+      "Damage Magicka",
+      "Fear"
+    ]
+  },
+  {
+    "name": "Daedra Silk",
+    "source": "Rare Curios",
+    "effects": [
+      "Lingering Damage Stamina",
+      "Paralysis",
+      "Night Eye",
+      "Invisibility"
+    ]
+  },
+  {
+    "name": "Daedra Venin",
+    "source": "Rare Curios",
+    "effects": [
+      "Ravage Health",
+      "Paralysis",
+      "Fortify Destruction",
+      "Spell Absorption"
+    ]
+  },
+  {
+    "name": "Daedroth Teeth",
+    "source": "Rare Curios",
+    "effects": [
+      "Resist Frost",
+      "Light",
+      "Damage Magicka Regen",
+      "Regenerate Stamina"
+    ]
+  },
+  {
+    "name": "Deathbell",
+    "source": "Skyrim",
+    "effects": [
+      "Damage Health",
+      "Ravage Stamina",
+      "Slow",
+      "Weakness to Poison"
+    ]
+  },
+  {
+    "name": "Dragon's Tongue",
+    "source": "Skyrim",
+    "effects": [
+      "Resist Fire",
+      "Fortify Barter",
+      "Fortify Illusion",
+      "Fortify Two-handed"
+    ]
+  },
+  {
+    "name": "Dreugh Wax",
+    "source": "Rare Curios",
+    "effects": [
+      "Weakness to Magic",
+      "Frenzy",
+      "Fortify Enchanting",
+      "Fortify Smithing"
+    ]
+  },
+  {
+    "name": "Dwarven Oil",
+    "source": "Skyrim",
+    "effects": [
+      "Weakness to Magic",
+      "Fortify Illusion",
+      "Regenerate Magicka",
+      "Restore Magicka"
+    ]
+  },
+  {
+    "name": "Ectoplasm",
+    "source": "Skyrim",
+    "effects": [
+      "Restore Magicka",
+      "Fortify Destruction",
+      "Fortify Magicka",
+      "Damage Health"
+    ]
+  },
+  {
+    "name": "Elves Ear",
+    "source": "Skyrim",
+    "effects": [
+      "Restore Magicka",
+      "Fortify Marksman",
+      "Weakness to Frost",
+      "Resist Fire"
+    ]
+  },
+  {
+    "name": "Elytra Ichor",
+    "source": "Saints & Seducers",
+    "effects": [
+      "Restore Magicka",
+      "Invisibility",
+      "Slow",
+      "Fear"
+    ]
+  },
+  {
+    "name": "Emperor Parasol Moss",
+    "source": "Dragonborn",
+    "effects": [
+      "Damage Health",
+      "Fortify Magicka",
+      "Regenerate Health",
+      "Fortify Two-handed"
+    ]
+  },
+  {
+    "name": "Eye of Sabre Cat",
+    "source": "Skyrim",
+    "effects": [
+      "Restore Stamina",
+      "Ravage Health",
+      "Damage Magicka",
+      "Restore Health"
+    ]
+  },
+  {
+    "name": "Falmer Ear",
+    "source": "Skyrim",
+    "effects": [
+      "Damage Health",
+      "Frenzy",
+      "Resist Poison",
+      "Fortify Lockpicking"
+    ]
+  },
+  {
+    "name": "Farengar's Frost Salt",
+    "source": "Skyrim Quest",
+    "effects": [
+      "Weakness to Fire",
+      "Resist Frost",
+      "Restore Magicka",
+      "Fortify Conjuration"
+    ]
+  },
+  {
+    "name": "Felsaad Tern Feathers",
+    "source": "Dragonborn",
+    "effects": [
+      "Restore Health",
+      "Fortify Light Armor",
+      "Cure Disease",
+      "Resist Magic"
+    ]
+  },
+  {
+    "name": "Fine-Cut Void Salts",
+    "source": "Skyrim Quest",
+    "effects": [
+      "Weakness to Shock",
+      "Resist Magic",
+      "Damage Health",
+      "Fortify Magicka"
+    ]
+  },
+  {
+    "name": "Fire Petal",
+    "source": "Rare Curios",
+    "effects": [
+      "Damage Health",
+      "Resist Fire",
+      "Spell Absorption",
+      "Paralysis"
+    ]
+  },
+  {
+    "name": "Fire Salts",
+    "source": "Skyrim",
+    "effects": [
+      "Weakness to Frost",
+      "Resist Fire",
+      "Restore Magicka",
+      "Regenerate Magicka"
+    ]
+  },
+  {
+    "name": "Flame Stalk",
+    "source": "Rare Curios",
+    "effects": [
+      "Restore Health",
+      "Resist Frost",
+      "Weakness to Fire",
+      "Invisibility"
+    ]
+  },
+  {
+    "name": "Fly Amanita",
+    "source": "Skyrim",
+    "effects": [
+      "Resist Fire",
+      "Fortify Two-handed",
+      "Frenzy",
+      "Regenerate Stamina"
+    ]
+  },
+  {
+    "name": "Frost Mirriam",
+    "source": "Skyrim",
+    "effects": [
+      "Resist Frost",
+      "Fortify Sneak",
+      "Ravage Magicka",
+      "Damage Stamina Regen"
+    ]
+  },
+  {
+    "name": "Frost Salts",
+    "source": "Skyrim",
+    "effects": [
+      "Weakness to Fire",
+      "Resist Frost",
+      "Restore Magicka",
+      "Fortify Conjuration"
+    ]
+  },
+  {
+    "name": "Fungus Stalk",
+    "source": "Rare Curios",
+    "effects": [
+      "Restore Magicka",
+      "Fortify Health",
+      "Fortify Stamina",
+      "Waterbreathing"
+    ]
+  },
+  {
+    "name": "Garlic",
+    "source": "Skyrim",
+    "effects": [
+      "Resist Poison",
+      "Fortify Stamina",
+      "Regenerate Magicka",
+      "Regenerate Health"
+    ]
+  },
+  {
+    "name": "Giant Lichen",
+    "source": "Skyrim",
+    "effects": [
+      "Weakness to Shock",
+      "Ravage Health",
+      "Weakness to Poison",
+      "Restore Magicka"
+    ]
+  },
+  {
+    "name": "Giant's Toe",
+    "source": "Skyrim",
+    "effects": [
+      "Damage Stamina",
+      "Fortify Health",
+      "Fortify Carry Weight",
+      "Damage Stamina Regen"
+    ]
+  },
+  {
+    "name": "Glassfish",
+    "source": "Rare Curios",
+    "effects": [
+      "Restore Magicka",
+      "Invisibility",
+      "Fortify Illusion",
+      "Fortify Persuasion"
+    ]
+  },
+  {
+    "name": "Gleamblossom",
+    "source": "Dawnguard",
+    "effects": [
+      "Resist Magic",
+      "Fear",
+      "Regenerate Health",
+      "Paralysis"
+    ]
+  },
+  {
+    "name": "Glow Dust",
+    "source": "Skyrim",
+    "effects": [
+      "Damage Magicka",
+      "Damage Magicka Regen",
+      "Fortify Destruction",
+      "Resist Shock"
+    ]
+  },
+  {
+    "name": "Glowing Mushroom",
+    "source": "Skyrim",
+    "effects": [
+      "Resist Shock",
+      "Fortify Destruction",
+      "Fortify Smithing",
+      "Fortify Health"
+    ]
+  },
+  {
+    "name": "Gnarl Bark",
+    "source": "Rare Curios",
+    "effects": [
+      "Damage Health",
+      "Regenerate Health",
+      "Fortify Heavy Armor",
+      "Resist Fire"
+    ]
+  },
+  {
+    "name": "Gold Kanet",
+    "source": "Rare Curios",
+    "effects": [
+      "Paralysis",
+      "Ravage Health",
+      "Weakness to Frost",
+      "Fortify Smithing"
+    ]
+  },
+  {
+    "name": "Goldfish",
+    "source": "Fishing",
+    "effects": [
+      "Restore Stamina",
+      "Fortify Heavy Armor",
+      "Waterbreathing",
+      "Resist Frost"
+    ]
+  },
+  {
+    "name": "Grass Pod",
+    "source": "Skyrim",
+    "effects": [
+      "Resist Poison",
+      "Ravage Magicka",
+      "Fortify Alteration",
+      "Restore Magicka"
+    ]
+  },
+  {
+    "name": "Green Butterfly Wing",
+    "source": "Saints & Seducers",
+    "effects": [
+      "Restore Magicka",
+      "Fear",
+      "Slow",
+      "Invisibility"
+    ]
+  },
+  {
+    "name": "Hackle-Lo Leaf",
+    "source": "Rare Curios",
+    "effects": [
+      "Restore Stamina",
+      "Paralysis",
+      "Waterbreathing",
+      "Fortify Restoration"
+    ]
+  },
+  {
+    "name": "Hagraven Claw",
+    "source": "Skyrim",
+    "effects": [
+      "Resist Magic",
+      "Lingering Damage Magicka",
+      "Fortify Enchanting",
+      "Fortify Barter"
+    ]
+  },
+  {
+    "name": "Hagraven Feathers",
+    "source": "Skyrim",
+    "effects": [
+      "Damage Magicka",
+      "Fortify Conjuration",
+      "Frenzy",
+      "Weakness to Shock"
+    ]
+  },
+  {
+    "name": "Hanging Moss",
+    "source": "Skyrim",
+    "effects": [
+      "Damage Magicka",
+      "Fortify Health",
+      "Damage Magicka Regen",
+      "Fortify One-handed"
+    ]
+  },
+  {
+    "name": "Harrada",
+    "source": "The Cause",
+    "effects": [
+      "Damage Health",
+      "Damage Magicka",
+      "Paralysis",
+      "Damage Magicka Regen"
+    ]
+  },
+  {
+    "name": "Hawk Beak",
+    "source": "Skyrim",
+    "effects": [
+      "Restore Stamina",
+      "Resist Frost",
+      "Fortify Carry Weight",
+      "Resist Shock"
+    ]
+  },
+  {
+    "name": "Hawk Feathers",
+    "source": "Skyrim",
+    "effects": [
+      "Cure Disease",
+      "Fortify Light Armor",
+      "Fortify One-handed",
+      "Fortify Sneak"
+    ]
+  },
+  {
+    "name": "Hawk's Egg",
+    "source": "Hearthfire",
+    "effects": [
+      "Resist Magic",
+      "Damage Magicka Regen",
+      "Waterbreathing",
+      "Lingering Damage Stamina"
+    ]
+  },
+  {
+    "name": "Heart of Order",
+    "source": "Rare Curios",
+    "effects": [
+      "Restore Health",
+      "Fortify Health",
+      "Fortify One-handed",
+      "Fortify Two-handed"
+    ]
+  },
+  {
+    "name": "Histcarp",
+    "source": "Skyrim",
+    "effects": [
+      "Restore Stamina",
+      "Fortify Magicka",
+      "Damage Stamina Regen",
+      "Waterbreathing"
+    ]
+  },
+  {
+    "name": "Honeycomb",
+    "source": "Skyrim",
+    "effects": [
+      "Restore Stamina",
+      "Fortify Block",
+      "Fortify Light Armor",
+      "Ravage Stamina"
+    ]
+  },
+  {
+    "name": "Human Flesh",
+    "source": "Skyrim",
+    "effects": [
+      "Damage Health",
+      "Paralysis",
+      "Restore Magicka",
+      "Fortify Sneak"
+    ]
+  },
+  {
+    "name": "Human Heart",
+    "source": "Skyrim",
+    "effects": [
+      "Damage Health",
+      "Damage Magicka",
+      "Damage Magicka Regen",
+      "Frenzy"
+    ]
+  },
+  {
+    "name": "Hunger Tongue",
+    "source": "Rare Curios",
+    "effects": [
+      "Weakness to Fire",
+      "Cure Disease",
+      "Cure Poison",
+      "Fortify Magicka"
+    ]
+  },
+  {
+    "name": "Hydnum Azure Giant Spore",
+    "source": "Rare Curios",
+    "effects": [
+      "Resist Frost",
+      "Fortify Health",
+      "Regenerate Health",
+      "Light"
+    ]
+  },
+  {
+    "name": "Hypha Facia",
+    "source": "Rare Curios",
+    "effects": [
+      "Weakness to Poison",
+      "Frenzy",
+      "Ravage Stamina",
+      "Resist Magic"
+    ]
+  },
+  {
+    "name": "Ice Wraith Teeth",
+    "source": "Skyrim",
+    "effects": [
+      "Weakness to Frost",
+      "Fortify Heavy Armor",
+      "Invisibility",
+      "Weakness to Fire"
+    ]
+  },
+  {
+    "name": "Imp Gall",
+    "source": "Rare Curios",
+    "effects": [
+      "Damage Health",
+      "Weakness to Fire",
+      "Fortify Barter",
+      "Cure Poison"
+    ]
+  },
+  {
+    "name": "Imp Stool",
+    "source": "Skyrim",
+    "effects": [
+      "Damage Health",
+      "Lingering Damage Health",
+      "Paralysis",
+      "Restore Health"
+    ]
+  },
+  {
+    "name": "Ironwood Fruit",
+    "source": "Bittercup",
+    "effects": [
+      "Restore Health",
+      "Resist Fire",
+      "Damage Stamina",
+      "Restore Magicka"
+    ]
+  },
+  {
+    "name": "Jarrin Root",
+    "source": "Skyrim Quest",
+    "effects": [
+      "Damage Health",
+      "Damage Magicka",
+      "Damage Stamina",
+      "Damage Magicka Regen"
+    ]
+  },
+  {
+    "name": "Jazbay Grapes",
+    "source": "Skyrim",
+    "effects": [
+      "Weakness to Magic",
+      "Fortify Magicka",
+      "Regenerate Magicka",
+      "Ravage Health"
+    ]
+  },
+  {
+    "name": "Juniper Berries",
+    "source": "Skyrim",
+    "effects": [
+      "Weakness to Fire",
+      "Fortify Marksman",
+      "Regenerate Health",
+      "Damage Stamina Regen"
+    ]
+  },
+  {
+    "name": "Juvenile Mudcrab",
+    "source": "Fishing",
+    "effects": [
+      "Regenerate Stamina",
+      "Fortify Carry Weight",
+      "Cure Disease",
+      "Fortify Two-handed"
+    ]
+  },
+  {
+    "name": "Kagouti Hide",
+    "source": "Rare Curios",
+    "effects": [
+      "Lingering Damage Stamina",
+      "Night Eye",
+      "Fortify Carry Weight",
+      "Resist Shock"
+    ]
+  },
+  {
+    "name": "Kresh Fiber",
+    "source": "Rare Curios",
+    "effects": [
+      "Weakness to Magic",
+      "Slow",
+      "Fortify Sneak",
+      "Fortify Pickpocket"
+    ]
+  },
+  {
+    "name": "Large Antlers",
+    "source": "Skyrim",
+    "effects": [
+      "Restore Stamina",
+      "Fortify Stamina",
+      "Slow",
+      "Damage Stamina Regen"
+    ]
+  },
+  {
+    "name": "Lavender",
+    "source": "Skyrim",
+    "effects": [
+      "Resist Magic",
+      "Fortify Stamina",
+      "Ravage Magicka",
+      "Fortify Conjuration"
+    ]
+  },
+  {
+    "name": "Lichor",
+    "source": "Rare Curios",
+    "effects": [
+      "Restore Magicka",
+      "Regenerate Magicka",
+      "Fortify Magicka",
+      "Spell Absorption"
+    ]
+  },
+  {
+    "name": "Luminous Russula",
+    "source": "Rare Curios",
+    "effects": [
+      "Lingering Damage Stamina",
+      "Lingering Damage Health",
+      "Waterbreathing",
+      "Fear"
+    ]
+  },
+  {
+    "name": "Luna Moth Wing",
+    "source": "Skyrim",
+    "effects": [
+      "Damage Magicka",
+      "Fortify Light Armor",
+      "Regenerate Health",
+      "Invisibility"
+    ]
+  },
+  {
+    "name": "Lyretail Anthias",
+    "source": "Fishing",
+    "effects": [
+      "Restore Magicka",
+      "Fortify Alteration",
+      "Fortify Conjuration",
+      "Fortify Carry Weight"
+    ]
+  },
+  {
+    "name": "Marshmerrow",
+    "source": "Rare Curios",
+    "effects": [
+      "Restore Health",
+      "Fortify Carry Weight",
+      "Weakness to Magic",
+      "Damage Stamina"
+    ]
+  },
+  {
+    "name": "Minotaur Horn",
+    "source": "Rare Curios",
+    "effects": [
+      "Resist Poison",
+      "Damage Magicka Regen",
+      "Regenerate Health",
+      "Regenerate Magicka"
+    ]
+  },
+  {
+    "name": "Moon Sugar",
+    "source": "Skyrim",
+    "effects": [
+      "Weakness to Fire",
+      "Resist Frost",
+      "Restore Magicka",
+      "Regenerate Magicka"
+    ]
+  },
+  {
+    "name": "Mora Tapinella",
+    "source": "Skyrim",
+    "effects": [
+      "Restore Magicka",
+      "Lingering Damage Health",
+      "Regenerate Stamina",
+      "Fortify Illusion"
+    ]
+  },
+  {
+    "name": "Mort Flesh",
+    "source": "Plague of the Dead",
+    "effects": [
+      "Damage Health",
+      "Damage Magicka",
+      "Damage Magicka Regen",
+      "Frenzy"
+    ]
+  },
+  {
+    "name": "Mudcrab Chitin",
+    "source": "Skyrim",
+    "effects": [
+      "Restore Stamina",
+      "Cure Disease",
+      "Resist Poison",
+      "Resist Fire"
+    ]
+  },
+  {
+    "name": "Namira's Rot",
+    "source": "Skyrim",
+    "effects": [
+      "Damage Magicka",
+      "Fortify Lockpicking",
+      "Fear",
+      "Regenerate Health"
+    ]
+  },
+  {
+    "name": "Netch Jelly",
+    "source": "Dragonborn",
+    "effects": [
+      "Paralysis",
+      "Fortify Carry Weight",
+      "Restore Stamina",
+      "Fear"
+    ]
+  },
+  {
+    "name": "Nightshade",
+    "source": "Skyrim",
+    "effects": [
+      "Damage Health",
+      "Damage Magicka Regen",
+      "Lingering Damage Stamina",
+      "Fortify Destruction"
+    ]
+  },
+  {
+    "name": "Nirnroot",
+    "source": "Skyrim",
+    "effects": [
+      "Damage Health",
+      "Damage Stamina",
+      "Invisibility",
+      "Resist Magic"
+    ]
+  },
+  {
+    "name": "Nordic Barnacle",
+    "source": "Skyrim",
+    "effects": [
+      "Damage Magicka",
+      "Waterbreathing",
+      "Regenerate Health",
+      "Fortify Pickpocket"
+    ]
+  },
+  {
+    "name": "Ogre's Teeth",
+    "source": "Rare Curios",
+    "effects": [
+      "Weakness to Shock",
+      "Resist Poison",
+      "Lingering Damage Magicka",
+      "Regenerate Health"
+    ]
+  },
+  {
+    "name": "Orange Dartwing",
+    "source": "Skyrim",
+    "effects": [
+      "Restore Stamina",
+      "Ravage Magicka",
+      "Fortify Pickpocket",
+      "Lingering Damage Health"
+    ]
+  },
+  {
+    "name": "Pearl",
+    "source": "Skyrim",
+    "effects": [
+      "Restore Stamina",
+      "Fortify Block",
+      "Restore Magicka",
+      "Resist Shock"
+    ]
+  },
+  {
+    "name": "Pearlfish",
+    "source": "Fishing",
+    "effects": [
+      "Restore Stamina",
+      "Resist Frost",
+      "Fortify Smithing",
+      "Fortify One-handed"
+    ]
+  },
+  {
+    "name": "Pine Thrush Egg",
+    "source": "Skyrim",
+    "effects": [
+      "Restore Stamina",
+      "Fortify Lockpicking",
+      "Weakness to Poison",
+      "Resist Shock"
+    ]
+  },
+  {
+    "name": "Poison Bloom",
+    "source": "Dawnguard",
+    "effects": [
+      "Damage Health",
+      "Slow",
+      "Fortify Carry Weight",
+      "Fear"
+    ]
+  },
+  {
+    "name": "Powdered Mammoth Tusk",
+    "source": "Skyrim",
+    "effects": [
+      "Restore Stamina",
+      "Fortify Sneak",
+      "Weakness to Fire",
+      "Fear"
+    ]
+  },
+  {
+    "name": "Purple Butterfly Wing",
+    "source": "Saints & Seducers",
+    "effects": [
+      "Regenerate Health",
+      "Regenerate Magicka",
+      "Regenerate Stamina",
+      "Paralysis"
+    ]
+  },
+  {
+    "name": "Purple Mountain Flower",
+    "source": "Skyrim",
+    "effects": [
+      "Restore Stamina",
+      "Fortify Sneak",
+      "Lingering Damage Magicka",
+      "Resist Frost"
+    ]
+  },
+  {
+    "name": "Pygmy Sunfish",
+    "source": "Fishing",
+    "effects": [
+      "Restore Stamina",
+      "Lingering Damage Magicka",
+      "Damage Magicka Regen",
+      "Fortify Restoration"
+    ]
+  },
+  {
+    "name": "Red Kelp Gas Bladder",
+    "source": "Rare Curios",
+    "effects": [
+      "Regenerate Stamina",
+      "Waterbreathing",
+      "Cure Disease",
+      "Fortify Magicka"
+    ]
+  },
+  {
+    "name": "Red Mountain Flower",
+    "source": "Skyrim",
+    "effects": [
+      "Restore Magicka",
+      "Ravage Magicka",
+      "Fortify Magicka",
+      "Damage Health"
+    ]
+  },
+  {
+    "name": "Redwort Flower",
+    "source": "Rare Curios",
+    "effects": [
+      "Resist Frost",
+      "Cure Poison",
+      "Damage Health",
+      "Invisibility"
+    ]
+  },
+  {
+    "name": "River Betty",
+    "source": "Skyrim",
+    "effects": [
+      "Damage Health",
+      "Fortify Alteration",
+      "Slow",
+      "Fortify Carry Weight"
+    ]
+  },
+  {
+    "name": "Rock Warbler Egg",
+    "source": "Skyrim",
+    "effects": [
+      "Restore Health",
+      "Fortify One-handed",
+      "Damage Stamina",
+      "Weakness to Magic"
+    ]
+  },
+  {
+    "name": "Roobrush",
+    "source": "Rare Curios",
+    "effects": [
+      "Weakness to Magic",
+      "Fortify Sneak",
+      "Lingering Damage Health",
+      "Cure Poison"
+    ]
+  },
+  {
+    "name": "Rot Scale",
+    "source": "Rare Curios",
+    "effects": [
+      "Slow",
+      "Lingering Damage Health",
+      "Fear",
+      "Paralysis"
+    ]
+  },
+  {
+    "name": "Sabre Cat Tooth",
+    "source": "Skyrim",
+    "effects": [
+      "Restore Stamina",
+      "Fortify Heavy Armor",
+      "Fortify Smithing",
+      "Weakness to Poison"
+    ]
+  },
+  {
+    "name": "Salmon Roe",
+    "source": "Hearthfire",
+    "effects": [
+      "Restore Stamina",
+      "Waterbreathing",
+      "Fortify Magicka",
+      "Regenerate Magicka"
+    ]
+  },
+  {
+    "name": "Salt Pile",
+    "source": "Skyrim",
+    "effects": [
+      "Weakness to Magic",
+      "Fortify Restoration",
+      "Slow",
+      "Regenerate Magicka"
+    ]
+  },
+  {
+    "name": "Saltrice",
+    "source": "Rare Curios",
+    "effects": [
+      "Restore Stamina",
+      "Fortify Magicka",
+      "Damage Stamina Regen",
+      "Restore Health"
+    ]
+  },
+  {
+    "name": "Scalon Fin",
+    "source": "Fishing",
+    "effects": [
+      "Waterbreathing",
+      "Damage Health",
+      "Lingering Damage Magicka",
+      "Damage Magicka Regen"
+    ]
+  },
+  {
+    "name": "Scaly Pholiota",
+    "source": "Skyrim",
+    "effects": [
+      "Weakness to Magic",
+      "Fortify Illusion",
+      "Regenerate Stamina",
+      "Fortify Carry Weight"
+    ]
+  },
+  {
+    "name": "Scathecraw",
+    "source": "Dragonborn",
+    "effects": [
+      "Ravage Health",
+      "Ravage Stamina",
+      "Ravage Magicka",
+      "Lingering Damage Health"
+    ]
+  },
+  {
+    "name": "Screaming Maw",
+    "source": "Saints & Seducers",
+    "effects": [
+      "Regenerate Magicka",
+      "Fortify Alteration",
+      "Invisibility",
+      "Regenerate Health"
+    ]
+  },
+  {
+    "name": "Scrib Jelly",
+    "source": "Rare Curios",
+    "effects": [
+      "Regenerate Magicka",
+      "Cure Poison",
+      "Cure Disease",
+      "Regenerate Stamina"
+    ]
+  },
+  {
+    "name": "Scrib Jerky",
+    "source": "Rare Curios",
+    "effects": [
+      "Restore Stamina",
+      "Fortify Stamina",
+      "Paralysis",
+      "Waterbreathing"
+    ]
+  },
+  {
+    "name": "Silverside Perch",
+    "source": "Skyrim",
+    "effects": [
+      "Restore Stamina",
+      "Damage Stamina Regen",
+      "Ravage Health",
+      "Resist Frost"
+    ]
+  },
+  {
+    "name": "Simon Rodayne's Heart",
+    "source": "Spell Knight Armor",
+    "effects": [
+      "Damage Health",
+      "Damage Magicka",
+      "Damage Magicka Regen",
+      "Frenzy"
+    ]
+  },
+  {
+    "name": "Skeever Tail",
+    "source": "Skyrim",
+    "effects": [
+      "Damage Stamina Regen",
+      "Ravage Health",
+      "Damage Health",
+      "Fortify Light Armor"
+    ]
+  },
+  {
+    "name": "Slaughterfish Egg",
+    "source": "Skyrim",
+    "effects": [
+      "Resist Poison",
+      "Fortify Pickpocket",
+      "Lingering Damage Health",
+      "Fortify Stamina"
+    ]
+  },
+  {
+    "name": "Slaughterfish Scales",
+    "source": "Skyrim",
+    "effects": [
+      "Resist Frost",
+      "Lingering Damage Health",
+      "Fortify Heavy Armor",
+      "Fortify Block"
+    ]
+  },
+  {
+    "name": "Sload Soap",
+    "source": "Rare Curios",
+    "effects": [
+      "Resist Fire",
+      "Fear",
+      "Fortify Conjuration",
+      "Fortify Alteration"
+    ]
+  },
+  {
+    "name": "Small Antlers",
+    "source": "Skyrim",
+    "effects": [
+      "Weakness to Poison",
+      "Fortify Restoration",
+      "Lingering Damage Stamina",
+      "Damage Health"
+    ]
+  },
+  {
+    "name": "Small Pearl",
+    "source": "Skyrim",
+    "effects": [
+      "Restore Stamina",
+      "Fortify One-handed",
+      "Fortify Restoration",
+      "Resist Frost"
+    ]
+  },
+  {
+    "name": "Snowberries",
+    "source": "Skyrim",
+    "effects": [
+      "Resist Fire",
+      "Fortify Enchanting",
+      "Resist Frost",
+      "Resist Shock"
+    ]
+  },
+  {
+    "name": "Spadefish",
+    "source": "Fishing",
+    "effects": [
+      "Restore Health",
+      "Fortify Lockpicking",
+      "Fortify Pickpocket",
+      "Cure Disease"
+    ]
+  },
+  {
+    "name": "Spawn Ash",
+    "source": "Dragonborn",
+    "effects": [
+      "Ravage Stamina",
+      "Resist Fire",
+      "Fortify Enchanting",
+      "Ravage Magicka"
+    ]
+  },
+  {
+    "name": "Spiddal Stick",
+    "source": "The Cause",
+    "effects": [
+      "Damage Health",
+      "Damage Magicka",
+      "Weakness to Fire",
+      "Restore Stamina"
+    ]
+  },
+  {
+    "name": "Spider Egg",
+    "source": "Skyrim",
+    "effects": [
+      "Damage Stamina",
+      "Damage Magicka Regen",
+      "Fortify Lockpicking",
+      "Fortify Marksman"
+    ]
+  },
+  {
+    "name": "Spriggan Sap",
+    "source": "Skyrim",
+    "effects": [
+      "Damage Magicka Regen",
+      "Fortify Enchanting",
+      "Fortify Smithing",
+      "Fortify Alteration"
+    ]
+  },
+  {
+    "name": "Steel-Blue Entoloma",
+    "source": "Goblins",
+    "effects": [
+      "Restore Magicka",
+      "Fortify Destruction",
+      "Resist Frost",
+      "Fortify Carry Weight"
+    ]
+  },
+  {
+    "name": "Stoneflower Petals",
+    "source": "Rare Curios",
+    "effects": [
+      "Weakness to Shock",
+      "Fortify One-handed",
+      "Fortify Magicka",
+      "Fortify Enchanting"
+    ]
+  },
+  {
+    "name": "Swamp Fungal Pod",
+    "source": "Skyrim",
+    "effects": [
+      "Resist Shock",
+      "Lingering Damage Magicka",
+      "Paralysis",
+      "Restore Health"
+    ]
+  },
+  {
+    "name": "Taproot",
+    "source": "Skyrim",
+    "effects": [
+      "Weakness to Magic",
+      "Fortify Illusion",
+      "Regenerate Magicka",
+      "Restore Magicka"
+    ]
+  },
+  {
+    "name": "Thistle Branch",
+    "source": "Skyrim",
+    "effects": [
+      "Resist Frost",
+      "Ravage Stamina",
+      "Resist Poison",
+      "Fortify Heavy Armor"
+    ]
+  },
+  {
+    "name": "Thorn Hook",
+    "source": "Saints & Seducers",
+    "effects": [
+      "Lingering Damage Health",
+      "Paralysis",
+      "Regenerate Magicka",
+      "Regenerate Health"
+    ]
+  },
+  {
+    "name": "Torchbug Thorax",
+    "source": "Skyrim",
+    "effects": [
+      "Restore Stamina",
+      "Lingering Damage Magicka",
+      "Weakness to Magic",
+      "Fortify Stamina"
+    ]
+  },
+  {
+    "name": "Trama Root",
+    "source": "Dragonborn",
+    "effects": [
+      "Weakness to Shock",
+      "Fortify Carry Weight",
+      "Damage Magicka",
+      "Slow"
+    ]
+  },
+  {
+    "name": "Troll Fat",
+    "source": "Skyrim",
+    "effects": [
+      "Resist Poison",
+      "Fortify Two-handed",
+      "Frenzy",
+      "Damage Health"
+    ]
+  },
+  {
+    "name": "Tundra Cotton",
+    "source": "Skyrim",
+    "effects": [
+      "Resist Magic",
+      "Fortify Magicka",
+      "Fortify Block",
+      "Fortify Barter"
+    ]
+  },
+  {
+    "name": "Vampire Dust",
+    "source": "Skyrim",
+    "effects": [
+      "Invisibility",
+      "Restore Magicka",
+      "Regenerate Health",
+      "Cure Disease"
+    ]
+  },
+  {
+    "name": "Void Essence",
+    "source": "Rare Curios",
+    "effects": [
+      "Restore Health",
+      "Fortify Health",
+      "Fortify Stamina",
+      "Regenerate Health"
+    ]
+  },
+  {
+    "name": "Void Salts",
+    "source": "Skyrim",
+    "effects": [
+      "Weakness to Shock",
+      "Resist Magic",
+      "Damage Health",
+      "Fortify Magicka"
+    ]
+  },
+  {
+    "name": "Watcher's Eye",
+    "source": "Rare Curios",
+    "effects": [
+      "Night Eye",
+      "Fortify Magicka",
+      "Fortify Illusion",
+      "Spell Absorption"
+    ]
+  },
+  {
+    "name": "Wheat",
+    "source": "Skyrim",
+    "effects": [
+      "Restore Health",
+      "Fortify Health",
+      "Damage Stamina Regen",
+      "Lingering Damage Magicka"
+    ]
+  },
+  {
+    "name": "White Cap",
+    "source": "Skyrim",
+    "effects": [
+      "Weakness to Frost",
+      "Fortify Heavy Armor",
+      "Restore Magicka",
+      "Ravage Magicka"
+    ]
+  },
+  {
+    "name": "Wild Grass Pod",
+    "source": "Forgotten Seasons",
+    "effects": [
+      "Resist Poison",
+      "Ravage Magicka",
+      "Fortify Alteration",
+      "Restore Magicka"
+    ]
+  },
+  {
+    "name": "Wisp Stalk Caps",
+    "source": "Rare Curios",
+    "effects": [
+      "Damage Health",
+      "Weakness to Poison",
+      "Frenzy",
+      "Regenerate Stamina"
+    ]
+  },
+  {
+    "name": "Wisp Wrappings",
+    "source": "Skyrim",
+    "effects": [
+      "Restore Stamina",
+      "Fortify Destruction",
+      "Fortify Carry Weight",
+      "Resist Magic"
+    ]
+  },
+  {
+    "name": "Withering Moon",
+    "source": "Rare Curios",
+    "effects": [
+      "Restore Magicka",
+      "Spell Absorption",
+      "Fortify Light Armor",
+      "Cure Disease"
+    ]
+  },
+  {
+    "name": "Worm's Head Cap",
+    "source": "Rare Curios",
+    "effects": [
+      "Fortify Lockpicking",
+      "Night Eye",
+      "Fortify Carry Weight",
+      "Slow"
+    ]
+  },
+  {
+    "name": "Yellow Mountain Flower",
+    "source": "Dawnguard",
+    "effects": [
+      "Resist Poison",
+      "Fortify Restoration",
+      "Fortify Health",
+      "Damage Stamina Regen"
+    ]
+  }
+]
