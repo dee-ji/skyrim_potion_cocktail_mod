@@ -36,6 +36,8 @@ Initial milestones:
 2. decide whether SkyUI / MCM is required
 3. decide whether SKSE is required
 4. document the data boundary between the companion app and the in-game layer
+5. implement inventory export from a real Skyrim save
+6. package the bridge with explicit dependency notes
 
 Success criteria:
 

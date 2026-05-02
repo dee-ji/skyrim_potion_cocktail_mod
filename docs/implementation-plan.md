@@ -1,185 +1,353 @@
 # Implementation Plan
 
-## Current Reading
+## Purpose
 
-The repo is intentionally a delivery repo, not the domain source of truth. The first implementation target is a packaged Windows companion app for Skyrim PC players. The Skyrim-side mod comes later and should start as a narrow integration layer, not a full rewrite of the browser app in Papyrus or SkyUI.
+This plan breaks the remaining work into small, testable phases. Each phase should leave the repo in a working state before the next phase starts.
 
-Authoritative domain behavior still lives in the source app repo until this repo has a shared export or shared core package.
+The companion app remains the primary product. The Skyrim-side mod layer should stay narrow and should not reimplement rarity, discovery scoring, recipe ranking, or the companion UI.
 
-## Guiding Constraints
+## Ground Rules
 
-- preserve ingredient, effect, source, rarity, inventory, known-effect, and discovery-scoring semantics
-- do not manually recreate the ingredient dataset
-- do not redefine rarity or discovery priority without documenting an explicit divergence
-- isolate Skyrim-specific integration from shared domain behavior
-- keep Nexus packaging practical for users who do not want to set up Python manually
+- Keep the repo independently runnable from committed files.
+- Use `uv` for Python commands.
+- Preserve ingredient, effect, source, rarity, inventory, known-effect, and discovery-scoring semantics.
+- Do not manually recreate source data from memory.
+- Document intentional divergences in `docs/divergences.md`.
+- Keep Skyrim-specific code isolated under `skyrim_mod/`.
+- Prefer inventory-only bridge functionality before attempting known-effect automation.
 
-## Phase 0: Baseline Import And Audit
+## Completed Foundation
 
-Goal: establish a repeatable way to consume the source app baseline before building new behavior.
+### Phase 0: Baseline Import And Audit
 
-Status: started. The repo now has an explicit maintainer importer, imported baseline assets, a source manifest, and a validation script. The committed baseline is sufficient for users and packagers who do not have the source app repo.
+Status: complete enough for current development.
 
-Tasks:
+Delivered:
 
-1. Identify the source app repo location and commit/tag that this delivery repo targets.
-2. Copy or export the authoritative baseline into `shared/` using a documented process.
-3. Add a manifest that records:
-   - source repo name or path
-   - source commit/tag
-   - files imported
-   - import date
-   - known divergences, if any
-4. Add validation checks that compare imported data shape against expected fields.
-5. Create an initial divergence log, even if it starts empty.
+- committed shared baseline under `shared/`
+- source baseline manifest under `shared/manifests/source-baseline.json`
+- source refresh command requiring explicit `--source`
+- newline-stable hash validation
+- `tools/validate_shared_baseline.py`
 
-Deliverables:
+Verification:
 
-- `shared/` contains imported domain data and source handoff docs.
-- `shared/manifests/source-baseline.json` records the imported source repo, commit, source dirty state, file list, sizes, and hashes.
-- `docs/source-of-truth.md` names the exact import strategy.
-- `tools/import_source_baseline.py` refreshes shared assets from the source app repo.
-- `tools/validate_shared_baseline.py` validates the manifest, ingredient data shape, effect ordering expectations, unique ingredient names, and rarity tier consistency.
-
-Open decisions:
-
-- whether this repo should vendor exported JSON files, consume a source package, or pull from a git submodule/subtree
-- whether source-app Python logic can be packaged directly or must be exported into data-only artifacts
-
-## Phase 1: Companion App
-
-Goal: package the existing Skyrim Potion Cocktails experience into a local Windows-friendly app suitable for Nexus distribution.
-
-Status: started. The repo now has a committed source-app runtime snapshot, local launcher, dependency metadata, initial PyInstaller packaging notes, and a maintainer build command that does not require the source app unless `--refresh-source` is requested.
-
-### Milestone 1: Runtime Shape
-
-Choose the companion-app delivery shape:
-
-- local bundled web app with an embedded backend
-- desktop shell around the existing app
-- static/exported frontend plus local data files, if the app can function without server behavior
-
-Preferred starting assumption: bundle the existing app with a small launcher so users do not manually install Python.
-
-Tasks:
-
-1. Inspect the source app runtime requirements.
-2. Decide whether to reuse FastAPI directly, wrap it, or export static assets.
-3. Define the local port, startup behavior, shutdown behavior, and browser-opening behavior.
-4. Document where user state is stored, such as inventory and known effects.
-
-Deliverables:
-
-- `companion_app/` contains a launcher proof of concept and runtime notes.
-- Runtime behavior is documented for development and packaged builds.
-
-### Milestone 2: Shared Data Boundary
-
-Define what crosses from the authoritative source app into this repo.
-
-Tasks:
-
-1. Import or reference ingredient data.
-2. Import or reference rarity behavior.
-3. Import or reference discovery-scoring behavior.
-4. Add smoke tests or validation scripts for the imported baseline.
-5. Document any companion-app-specific state storage format.
-
-Deliverables:
-
-- shared assets are not rebuilt by hand
-- discovery and rarity semantics can be verified after import
-- companion app state is separated from source baseline data
-
-### Milestone 3: Windows Build
-
-Create a repeatable build flow for users.
-
-Tasks:
-
-1. Choose packaging tooling, likely PyInstaller, Briefcase, Tauri, Electron, or a zip-based local runtime depending on source app shape.
-2. Produce a first Windows build artifact.
-3. Verify launch from a clean machine or VM-like environment.
-4. Add release packaging notes for Nexus.
-
-Deliverables:
-
-- one-command build path for maintainers
-- distributable zip or installer candidate
-- user-facing launch instructions
-
-### Milestone 4: Nexus Readiness
-
-Prepare release material without expanding scope.
-
-Tasks:
-
-1. Add installation instructions.
-2. Add uninstall and data-location notes.
-3. Add compatibility notes for Skyrim editions, even if the companion app is edition-independent.
-4. Add troubleshooting for blocked ports, antivirus warnings, and local state reset.
-
-Deliverables:
-
-- Nexus-ready archive structure
-- README section aimed at players rather than developers
-
-## Phase 2: Narrow Skyrim Mod Integration
-
-Goal: provide a small in-game feature that complements the companion app without forking domain rules.
-
-Status: started. The repo now has a JSON bridge exchange format, a companion importer, and a Skyrim-side source scaffold that keeps domain logic out of Papyrus.
-
-Initial candidate features, from smallest to largest:
-
-1. In-game book or note that points users to the companion app and explains the workflow.
-2. MCM page with companion-app status/help and configurable export/import paths.
-3. Lightweight inventory export from Skyrim to companion app.
-4. Known-effects export/import bridge.
-5. In-game notification or lookup helper for selected ingredient combinations.
-
-Recommended first useful feature: inventory export or known-effects export, because it gives practical value while keeping the heavy discovery logic in the companion app.
-
-Tasks:
-
-1. Decide whether the first feature needs SkyUI/MCM.
-2. Decide whether SKSE is required for file I/O or integration.
-3. Define the data exchange format between Skyrim and the companion app.
-4. Keep Papyrus scripts thin and data-oriented.
-5. Document every divergence caused by Creation Kit, Papyrus, SkyUI, or SKSE limits.
-
-Deliverables:
-
-- `skyrim_mod/` contains source assets and documented Creation Kit / Papyrus project structure.
-- Data boundary is explicit in `docs/skyrim-bridge.md` and does not duplicate discovery scoring in Papyrus.
-- The mod can be packaged independently from the companion app if needed.
-
-## Proposed Repository Structure
-
-```text
-companion_app/
-  launcher/
-  packaging/
-  README.md
-shared/
-  data/
-  manifests/
-  validation/
-skyrim_mod/
-  scripts/
-  source/
-  packaging/
-docs/
-  implementation-plan.md
-  roadmap.md
-  source-of-truth.md
-  divergences.md
+```sh
+uv run python tools/validate_shared_baseline.py
 ```
 
-## Immediate Next Steps
+### Phase 1: Companion App Foundation
 
-1. Decide whether the current committed copied-file baseline is sufficient, or whether the source app should provide an explicit export package later.
-2. Keep `docs/divergences.md` updated as soon as any source-app behavior changes for packaging, UX, or Skyrim engine reasons.
-3. Produce and test the first Windows PyInstaller build.
-4. Add release archive hashes and versioning once a Windows artifact exists.
+Status: complete enough for packaging work.
+
+Delivered:
+
+- committed companion runtime under `companion_app/runtime/`
+- local launcher at `companion_app/launcher.py`
+- runtime manifest under `companion_app/runtime-manifest.json`
+- PyInstaller spec scaffold
+- maintainer build/preflight command
+
+Verification:
+
+```sh
+uv run python tools/build_companion.py --skip-pyinstaller
+uv run python companion_app/launcher.py --check
+```
+
+### Phase 2: Bridge Foundation
+
+Status: complete enough for Skyrim-side export work.
+
+Delivered:
+
+- JSON exchange schema under `shared/exchange/skyrim-bridge.schema.json`
+- sample bridge export
+- companion-side bridge importer at `tools/import_skyrim_bridge.py`
+- Papyrus scaffold under `skyrim_mod/source/scripts/`
+- bridge tests
+
+Verification:
+
+```sh
+uv run pytest -q
+make bridge-import-example
+```
+
+## Buildable Phases
+
+### Phase 3: Windows Companion Build
+
+Goal: produce a working Windows companion app folder from PyInstaller.
+
+Scope:
+
+1. Build the PyInstaller one-folder app on Windows.
+2. Fix PyInstaller spec issues only.
+3. Verify the generated executable launches the local web app.
+4. Confirm no source app checkout is required.
+
+Do not include:
+
+- Skyrim plugin work
+- bridge UI changes
+- installer creation
+- broad frontend redesign
+
+Deliverables:
+
+- working `dist/SkyrimPotionCocktails/` folder
+- any required PyInstaller spec updates
+- short build notes if Windows-specific adjustments are discovered
+
+Verification:
+
+```powershell
+uv sync --extra build
+uv run python tools/build_companion.py
+dist\SkyrimPotionCocktails\SkyrimPotionCocktails.exe
+```
+
+Manual checks:
+
+- browser opens to `http://127.0.0.1:8765/`
+- character creation works
+- inventory updates work
+- known effects can be marked
+- closing and reopening preserves state in `%LOCALAPPDATA%\Skyrim Potion Cocktails\`
+
+Exit criteria:
+
+- a Windows user can run the generated executable without installing Python
+- no source app checkout is needed
+
+### Phase 4: Companion Release Polish
+
+Goal: make the Windows companion build suitable for a first private release archive.
+
+Scope:
+
+1. Add player-facing release README content for the packaged folder.
+2. Add version metadata and release notes template.
+3. Add archive/checksum helper or documented checksum command.
+4. Document blocked-port, browser-open, antivirus, uninstall, and state-reset troubleshooting.
+
+Do not include:
+
+- Skyrim plugin work
+- installer technology
+- MCM/SkyUI work
+
+Deliverables:
+
+- release README template
+- release notes template
+- checksum/version documentation
+- updated Nexus packaging docs
+
+Verification:
+
+```sh
+uv run python tools/build_companion.py --skip-pyinstaller
+```
+
+Manual checks:
+
+- package docs explain install, launch, upgrade, uninstall, and state location
+- release artifact excludes `.venv`, local databases, caches, and maintainer-only source paths
+
+Exit criteria:
+
+- the companion app can be zipped and shared with a tester with clear instructions
+
+### Phase 5: Skyrim Inventory Mapping
+
+Goal: define the mapping between Skyrim ingredient forms and companion ingredient names.
+
+Scope:
+
+1. Add a data file for Skyrim form/editor IDs mapped to canonical ingredient names.
+2. Cover base Skyrim first.
+3. Add validation that every mapped companion name exists in `shared/data/ingredients.json`.
+4. Document unsupported DLC/Creation ingredients as explicit gaps.
+
+Do not include:
+
+- Papyrus export logic
+- known-effect export
+- MCM/SkyUI UI
+
+Deliverables:
+
+- mapping file under `skyrim_mod/`
+- validation script or test
+- documented coverage status
+
+Verification:
+
+```sh
+uv run pytest -q
+```
+
+Manual checks:
+
+- spot-check several common ingredients against Creation Kit / UESP naming
+- verify all mapped companion names are exact canonical names
+
+Exit criteria:
+
+- base-game inventory export has a reliable name mapping target
+
+### Phase 6: Skyrim Inventory Export Prototype
+
+Goal: export ingredient inventory from Skyrim to the bridge JSON format.
+
+Scope:
+
+1. Choose JSON writer mechanism: PapyrusUtil, JContainers, or external helper.
+2. Implement inventory collection for mapped ingredients.
+3. Write `bridge-export.json` matching `shared/exchange/skyrim-bridge.schema.json`.
+4. Keep the export trigger simple, such as console-started quest function or minimal spell/power.
+
+Do not include:
+
+- known-effect export
+- discovery/ranking logic
+- polished MCM
+- broad DLC/Creation coverage unless mapping already exists
+
+Deliverables:
+
+- Papyrus source update
+- dependency note for chosen JSON writer
+- example output from a real save
+
+Verification:
+
+```sh
+uv run python tools/import_skyrim_bridge.py path/to/bridge-export.json --state-dir /tmp/spc-real-export-test
+```
+
+Manual checks:
+
+- export file is created from a real Skyrim SE/AE save
+- companion importer accepts it without hand editing
+- imported inventory appears for the expected character
+
+Exit criteria:
+
+- a real Skyrim inventory can be moved into the companion app
+
+### Phase 7: Bridge Usability
+
+Goal: make the bridge usable by a player without developer-only steps.
+
+Scope:
+
+1. Add a simple in-game export trigger.
+2. Add clear export file location conventions.
+3. Add companion-side import instructions for Windows users.
+4. Add error messages or troubleshooting for missing dependencies/export file.
+
+Do not include:
+
+- full MCM unless needed
+- known-effect export unless inventory export is stable
+- recipe lookup inside Skyrim
+
+Deliverables:
+
+- updated Skyrim mod README
+- bridge workflow documentation
+- packaging notes for scripts/plugin/dependencies
+
+Verification:
+
+- export from Skyrim
+- import into companion app
+- repeat after inventory changes
+
+Exit criteria:
+
+- a tester can follow documented steps without hand-editing JSON
+
+### Phase 8: Known-Effects Investigation
+
+Goal: decide whether known-effect export is reliable enough to ship.
+
+Scope:
+
+1. Research/test whether the Skyrim scripting stack can read known alchemy effects reliably.
+2. Prototype known-effect export if feasible.
+3. Import known effects with existing `tools/import_skyrim_bridge.py`.
+4. Document limitations if Skyrim does not expose enough data safely.
+
+Do not include:
+
+- blocking inventory bridge release on known effects
+- reimplementing discovery scoring in Skyrim
+
+Deliverables:
+
+- feasibility note
+- prototype or explicit non-go decision
+- importer/test updates only if the export shape changes
+
+Verification:
+
+```sh
+uv run pytest -q
+```
+
+Manual checks:
+
+- compare exported known effects against an actual character's alchemy knowledge
+
+Exit criteria:
+
+- known-effect export is either shippable or explicitly deferred
+
+### Phase 9: First Nexus Candidate
+
+Goal: assemble a first release candidate for Skyrim PC users.
+
+Scope:
+
+1. Decide one archive vs separate companion/mod archives.
+2. Build Windows companion artifact.
+3. Package Skyrim bridge files and dependency notes.
+4. Add screenshots and final player instructions.
+5. Record artifact hashes.
+
+Do not include:
+
+- new feature work
+- broad UI redesign
+- unplanned mod scope expansion
+
+Deliverables:
+
+- release candidate archive(s)
+- release notes
+- checksums
+- final install/uninstall docs
+
+Verification:
+
+- clean Windows companion app test
+- clean Skyrim bridge test on Skyrim SE/AE
+- import exported inventory into companion app
+
+Exit criteria:
+
+- ready for private tester distribution or Nexus draft upload
+
+## Backlog After First Candidate
+
+- DLC and Creation ingredient mapping expansion
+- optional MCM settings page
+- one-click companion import from default bridge export location
+- installer or self-contained updater
+- companion UI polish for bridge import status
+- optional recipe lookup helper inside Skyrim
+
