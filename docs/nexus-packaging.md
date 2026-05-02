@@ -45,6 +45,7 @@ To remove saved companion-app state too, delete:
 
 - If the browser does not open, manually visit `http://127.0.0.1:8765/`.
 - If port `8765` is already in use, launch from a terminal with `--port <number>`.
+- If validation reports hash mismatches for text files such as `ingredients.json`, `rarity.py`, or Markdown files, update to the version that includes `.gitattributes` and newline-stable manifest validation. That symptom is usually caused by Windows CRLF checkout conversion, not by a broken uv environment.
 - If antivirus software flags the executable, document the exact build version, PyInstaller version, and archive hash before release.
 - If character data appears missing after an upgrade, check that the database still exists under `%LOCALAPPDATA%\Skyrim Potion Cocktails\`.
 

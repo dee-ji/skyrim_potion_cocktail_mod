@@ -18,6 +18,7 @@ IMPORTS = (
     ("docs/handoff.md", "shared/source_docs/handoff.md"),
     ("docs/discovery-scoring.md", "shared/source_docs/discovery-scoring.md"),
 )
+TEXT_HASH_SUFFIXES = {".html", ".json", ".md", ".py", ".toml", ".txt"}
 
 
 def repo_root() -> Path:
@@ -36,8 +37,14 @@ def run_git(source_root: Path, *args: str) -> str:
     return result.stdout.strip()
 
 
-def sha256(path: Path) -> str:
+def manifest_sha256(path: Path) -> str:
     digest = hashlib.sha256()
+    if path.suffix in TEXT_HASH_SUFFIXES or path.name == "Makefile":
+        content = path.read_text(encoding="utf-8")
+        normalized = content.replace("\r\n", "\n").replace("\r", "\n")
+        digest.update(normalized.encode("utf-8"))
+        return digest.hexdigest()
+
     with path.open("rb") as handle:
         for chunk in iter(lambda: handle.read(1024 * 1024), b""):
             digest.update(chunk)
@@ -61,7 +68,7 @@ def copy_imports(source_root: Path, destination_root: Path) -> list[dict[str, ob
             {
                 "source": source_rel,
                 "destination": destination_rel,
-                "sha256": sha256(destination_path),
+                "sha256": manifest_sha256(destination_path),
                 "size_bytes": destination_path.stat().st_size,
             }
         )

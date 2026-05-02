@@ -1,0 +1,8 @@
+*.md text eol=lf
+*.py text eol=lf
+*.json text eol=lf
+*.html text eol=lf
+*.toml text eol=lf
+*.lock text eol=lf
+Makefile text eol=lf
+

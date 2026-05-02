@@ -14,14 +14,21 @@ from typing import Any
 REQUIRED_INGREDIENT_KEYS = {"name", "source", "effects"}
 REQUIRED_RARITY_KEYS = {"rarity", "rarity_label", "rarity_rank", "rarity_note"}
 VALID_RARITY_TIERS = {"common", "uncommon", "rare", "very_rare"}
+TEXT_HASH_SUFFIXES = {".html", ".json", ".md", ".py", ".toml", ".txt"}
 
 
 def repo_root() -> Path:
     return Path(__file__).resolve().parents[1]
 
 
-def sha256(path: Path) -> str:
+def manifest_sha256(path: Path) -> str:
     digest = hashlib.sha256()
+    if path.suffix in TEXT_HASH_SUFFIXES or path.name == "Makefile":
+        content = path.read_text(encoding="utf-8")
+        normalized = content.replace("\r\n", "\n").replace("\r", "\n")
+        digest.update(normalized.encode("utf-8"))
+        return digest.hexdigest()
+
     with path.open("rb") as handle:
         for chunk in iter(lambda: handle.read(1024 * 1024), b""):
             digest.update(chunk)
@@ -86,7 +93,7 @@ def validate_manifest(root: Path) -> list[str]:
             errors.append(f"Imported file is missing: {destination}")
             continue
 
-        actual_hash = sha256(destination_path)
+        actual_hash = manifest_sha256(destination_path)
         if actual_hash != expected_hash:
             errors.append(
                 f"Hash mismatch for {destination}: expected {expected_hash}, got {actual_hash}"

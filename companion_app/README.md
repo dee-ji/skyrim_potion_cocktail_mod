@@ -52,6 +52,8 @@ uv run python tools/validate_shared_baseline.py
 uv run python tools/validate_companion_runtime.py
 ```
 
+On Windows, hash mismatch errors for committed text files usually mean Git converted line endings to CRLF. The repo includes `.gitattributes` and newline-stable validation so current checkouts should not fail for that reason.
+
 ## Packaging Direction
 
 The first packaging target is a Windows-friendly build that launches the local app without requiring users to install Python manually. The initial packaging path is PyInstaller because the source app is already Python/FastAPI based.
