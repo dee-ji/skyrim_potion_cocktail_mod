@@ -13,6 +13,10 @@ def repo_root() -> Path:
     return Path(__file__).resolve().parents[1]
 
 
+def packaging_spec(root: Path) -> Path:
+    return root / "companion_app" / "packaging" / "skyrim-potion-cocktails.spec"
+
+
 def run(command: list[str], root: Path) -> None:
     print(f"$ {' '.join(command)}")
     subprocess.run(command, cwd=root, check=True)
@@ -96,7 +100,14 @@ def main() -> int:
             "uv sync --extra build"
         )
 
-    run([pyinstaller, "companion_app/packaging/skyrim-potion-cocktails.spec"], root)
+    spec_path = packaging_spec(root)
+    if not spec_path.is_file():
+        raise SystemExit(
+            f"PyInstaller spec file is missing: {spec_path}\n"
+            "Run this command from the repository root after pulling the latest files."
+        )
+
+    run([pyinstaller, str(spec_path)], root)
     run([sys.executable, "tools/inspect_companion_dist.py"], root)
     return 0
 

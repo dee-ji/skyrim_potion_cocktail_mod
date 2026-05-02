@@ -25,6 +25,8 @@ Use `uv run python tools/build_companion.py --skip-pyinstaller` to run the prefl
 
 After PyInstaller finishes, the build flow inspects `dist/SkyrimPotionCocktails` for the executable, bundled runtime assets, and forbidden local artifacts such as databases, caches, and virtual environments.
 
+Do not invoke PyInstaller directly for normal builds. `tools/build_companion.py` passes the absolute path to `companion_app/packaging/skyrim-potion-cocktails.spec`, which avoids current-working-directory mistakes on Windows.
+
 The default build flow is independent of the original source app checkout. To intentionally refresh the vendored runtime and shared baseline before building:
 
 ```sh
