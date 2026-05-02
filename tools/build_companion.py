@@ -108,7 +108,9 @@ def main() -> int:
         )
 
     run([pyinstaller, str(spec_path)], root)
+    run([sys.executable, "tools/stage_companion_release.py"], root)
     run([sys.executable, "tools/inspect_companion_dist.py"], root)
+    run([sys.executable, "tools/hash_release.py", "dist/SkyrimPotionCocktails"], root)
     return 0
 
 

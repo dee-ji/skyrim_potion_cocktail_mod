@@ -8,8 +8,10 @@ The Windows archive should contain the PyInstaller `SkyrimPotionCocktails` folde
 
 - `SkyrimPotionCocktails.exe`
 - bundled Python dependencies
-- `runtime/app` with the synced FastAPI app, static UI, ingredient data, and rarity metadata
-- a short player README
+- bundled runtime assets with the synced FastAPI app, static UI, ingredient data, and rarity metadata
+- `README.md`
+- `RELEASE_NOTES_TEMPLATE.md`
+- `SHA256SUMS.txt`
 
 Do not include local SQLite databases, source app virtual environments, build caches, or developer-only state.
 
@@ -59,8 +61,23 @@ uv run python tools/build_companion.py
 
 This build uses the vendored runtime and shared baseline committed in this repo. It does not require the original Skyrim Potion Cocktails app checkout.
 
+The build flow:
+
+1. validates shared data and runtime manifests
+2. checks launcher import
+3. runs PyInstaller
+4. copies player-facing release files into `dist/SkyrimPotionCocktails`
+5. inspects the distribution for required assets and forbidden local state
+6. writes `dist/SkyrimPotionCocktails/SHA256SUMS.txt`
+
 For a preflight without producing a PyInstaller build:
 
 ```sh
 uv run python tools/build_companion.py --skip-pyinstaller
+```
+
+To regenerate checksums for an existing dist folder:
+
+```sh
+uv run python tools/hash_release.py dist/SkyrimPotionCocktails
 ```

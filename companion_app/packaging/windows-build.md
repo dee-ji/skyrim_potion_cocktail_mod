@@ -29,7 +29,9 @@ The build command runs:
 2. companion runtime validation
 3. launcher import check
 4. PyInstaller build
-5. distribution inspection
+5. release README / notes staging
+6. distribution inspection
+7. checksum generation
 
 ## Smoke Test
 
@@ -46,6 +48,7 @@ Then verify:
 - inventory can be updated
 - known effects can be marked
 - closing and reopening preserves state
+- `README.md`, `RELEASE_NOTES_TEMPLATE.md`, and `SHA256SUMS.txt` exist in `dist\SkyrimPotionCocktails`
 
 State should be stored at:
 

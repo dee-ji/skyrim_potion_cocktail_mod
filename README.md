@@ -124,6 +124,8 @@ Expected output:
 dist/SkyrimPotionCocktails/
 ```
 
+The build also stages `README.md`, `RELEASE_NOTES_TEMPLATE.md`, and `SHA256SUMS.txt` into the dist folder.
+
 Run the generated executable on Windows:
 
 ```powershell
@@ -242,4 +244,3 @@ tools/
   validate_shared_baseline.py
   validate_companion_runtime.py
 ```
-

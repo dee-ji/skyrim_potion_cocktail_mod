@@ -56,6 +56,8 @@ def inspect_dist(dist_dir: Path) -> list[str]:
     required_paths = [
         internal_root / "app" / "data" / "ingredients.json",
         internal_root / "app" / "static" / "index.html",
+        dist_dir / "README.md",
+        dist_dir / "RELEASE_NOTES_TEMPLATE.md",
     ]
     for path in required_paths:
         if not path.is_file():

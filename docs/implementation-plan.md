@@ -128,6 +128,8 @@ Exit criteria:
 
 Goal: make the Windows companion build suitable for a first private release archive.
 
+Status: in progress. Player README, release notes template, release staging, distribution inspection updates, and checksum generation have been added.
+
 Scope:
 
 1. Add player-facing release README content for the packaged folder.
