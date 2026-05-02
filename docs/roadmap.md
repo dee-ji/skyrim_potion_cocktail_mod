@@ -6,6 +6,10 @@ Objective:
 
 - package the existing web-based experience into a local Windows-friendly companion app
 
+Planning detail:
+
+- see `docs/implementation-plan.md`
+
 Initial milestones:
 
 1. define packaging target and runtime behavior
