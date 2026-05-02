@@ -129,6 +129,8 @@ Deliverables:
 
 Goal: provide a small in-game feature that complements the companion app without forking domain rules.
 
+Status: started. The repo now has a JSON bridge exchange format, a companion importer, and a Skyrim-side source scaffold that keeps domain logic out of Papyrus.
+
 Initial candidate features, from smallest to largest:
 
 1. In-game book or note that points users to the companion app and explains the workflow.
@@ -149,8 +151,8 @@ Tasks:
 
 Deliverables:
 
-- `skyrim_mod/` contains source assets or documented Creation Kit project structure.
-- Data boundary is explicit and does not duplicate discovery scoring in Papyrus.
+- `skyrim_mod/` contains source assets and documented Creation Kit / Papyrus project structure.
+- Data boundary is explicit in `docs/skyrim-bridge.md` and does not duplicate discovery scoring in Papyrus.
 - The mod can be packaged independently from the companion app if needed.
 
 ## Proposed Repository Structure

@@ -74,3 +74,13 @@ uv run python companion_app/launcher.py
 ```
 
 See `companion_app/README.md` and `docs/nexus-packaging.md` for runtime and packaging details.
+
+## Skyrim Bridge Development
+
+Phase 2 starts with a file-based bridge from Skyrim into the companion app. See `docs/skyrim-bridge.md`.
+
+Test the companion-side bridge importer with:
+
+```sh
+uv run python tools/import_skyrim_bridge.py shared/exchange/examples/skyrim-bridge-export.json --state-dir /tmp/spc-bridge-test
+```
