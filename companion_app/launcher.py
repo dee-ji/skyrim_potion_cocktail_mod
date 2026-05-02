@@ -14,10 +14,14 @@ DEFAULT_PORT = 8765
 
 
 def companion_root() -> Path:
+    if getattr(sys, "frozen", False):
+        return Path(getattr(sys, "_MEIPASS")).resolve()
     return Path(__file__).resolve().parent
 
 
 def runtime_root() -> Path:
+    if getattr(sys, "frozen", False):
+        return companion_root()
     return companion_root() / "runtime"
 
 
@@ -49,7 +53,7 @@ def configure_runtime(state_dir: Path) -> Path:
     app_dir = runtime / "app"
     if not app_dir.is_dir():
         raise FileNotFoundError(
-            f"Companion runtime is missing at {app_dir}. Run tools/sync_companion_runtime.py first."
+            f"Companion runtime is missing at {app_dir}. Run tools/sync_companion_runtime.py before development builds, or rebuild the packaged app."
         )
 
     sys.path.insert(0, str(runtime))

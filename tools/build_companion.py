@@ -97,6 +97,7 @@ def main() -> int:
         )
 
     run([pyinstaller, "companion_app/packaging/skyrim-potion-cocktails.spec"], root)
+    run([sys.executable, "tools/inspect_companion_dist.py"], root)
     return 0
 
 

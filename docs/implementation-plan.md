@@ -80,6 +80,8 @@ make bridge-import-example
 
 Goal: produce a working Windows companion app folder from PyInstaller.
 
+Status: in progress. The frozen-app runtime path, PyInstaller data layout, post-build distribution inspection, and Windows build checklist have been added. A local PyInstaller one-folder build passed import and API smoke tests; Windows remains the required acceptance environment for this phase.
+
 Scope:
 
 1. Build the PyInstaller one-folder app on Windows.
@@ -99,6 +101,7 @@ Deliverables:
 - working `dist/SkyrimPotionCocktails/` folder
 - any required PyInstaller spec updates
 - short build notes if Windows-specific adjustments are discovered
+- `tools/inspect_companion_dist.py` passes after PyInstaller
 
 Verification:
 
@@ -350,4 +353,3 @@ Exit criteria:
 - installer or self-contained updater
 - companion UI polish for bridge import status
 - optional recipe lookup helper inside Skyrim
-
