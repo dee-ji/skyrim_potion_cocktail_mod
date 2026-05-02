@@ -18,6 +18,8 @@ Authoritative domain behavior still lives in the source app repo until this repo
 
 Goal: establish a repeatable way to consume the source app baseline before building new behavior.
 
+Status: started. The repo now has an importer, imported baseline assets, a source manifest, and a validation script.
+
 Tasks:
 
 1. Identify the source app repo location and commit/tag that this delivery repo targets.
@@ -33,9 +35,11 @@ Tasks:
 
 Deliverables:
 
-- `shared/` contains imported domain data or a placeholder export contract.
+- `shared/` contains imported domain data and source handoff docs.
+- `shared/manifests/source-baseline.json` records the imported source repo, commit, source dirty state, file list, sizes, and hashes.
 - `docs/source-of-truth.md` names the exact import strategy.
-- A repeatable command or documented manual process exists for refreshing shared assets.
+- `tools/import_source_baseline.py` refreshes shared assets from the source app repo.
+- `tools/validate_shared_baseline.py` validates the manifest, ingredient data shape, effect ordering expectations, unique ingredient names, and rarity tier consistency.
 
 Open decisions:
 
@@ -171,8 +175,7 @@ docs/
 
 ## Immediate Next Steps
 
-1. Locate or provide the source app repo so the authoritative files can be inspected.
-2. Decide the baseline import strategy for `shared/`.
-3. Keep `docs/divergences.md` updated as soon as any source-app behavior changes for packaging, UX, or Skyrim engine reasons.
-4. Inspect the source app runtime and choose the companion packaging approach.
-5. Build the first companion launcher proof of concept before starting Creation Kit work.
+1. Decide whether the current copied-file import strategy is sufficient, or whether the source app should provide an explicit export package later.
+2. Keep `docs/divergences.md` updated as soon as any source-app behavior changes for packaging, UX, or Skyrim engine reasons.
+3. Inspect the source app runtime and choose the companion packaging approach.
+4. Build the first companion launcher proof of concept before starting Creation Kit work.

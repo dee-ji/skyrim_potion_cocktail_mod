@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "imported_at": "2026-05-02T17:31:46+00:00",
+  "source_repo": "/Users/data/PycharmProjects/skyrim_potion_cocktail_app",
+  "source_commit": "ffa954554049b6c46891afc0351ea21ee0ecc428",
+  "source_dirty": false,
+  "source_status": [],
+  "imports": [
+    {
+      "source": "app/data/ingredients.json",
+      "destination": "shared/data/ingredients.json",
+      "sha256": "e650f49197aa9bec860fc10aea309228e1382c68d1d3e4842cb4113f6143b5b1",
+      "size_bytes": 35172
+    },
+    {
+      "source": "app/rarity.py",
+      "destination": "shared/domain/rarity.py",
+      "sha256": "71696f52031a302b6eab108dffc6c2d6ae80ff6fbb7d050c48c020f8ea5d5e4b",
+      "size_bytes": 5234
+    },
+    {
+      "source": "AGENTS.md",
+      "destination": "shared/source_docs/AGENTS.md",
+      "sha256": "49d35ea80a088ff9958897ab206acc5662c85067bbc052b004294f5f72995555",
+      "size_bytes": 3051
+    },
+    {
+      "source": "docs/handoff.md",
+      "destination": "shared/source_docs/handoff.md",
+      "sha256": "2224051d90cfb30b4bf4224a3447a3f346624688624f6a6de7098898bfc980dc",
+      "size_bytes": 3299
+    },
+    {
+      "source": "docs/discovery-scoring.md",
+      "destination": "shared/source_docs/discovery-scoring.md",
+      "sha256": "539a9e8effe514d5f65f8ce269fe0923975ce44bf033fbb0ffbf2dcff0f7eee8",
+      "size_bytes": 1978
+    }
+  ]
+}

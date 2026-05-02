@@ -25,3 +25,28 @@ If this repo intentionally differs from the source app:
 - document the exact difference
 - explain why the divergence is necessary
 - state whether the cause is UX, packaging, Skyrim engine limits, or modding-tool limits
+
+## Current Import Strategy
+
+Phase 0 imports the authoritative baseline into `shared/` with:
+
+```sh
+python3 tools/import_source_baseline.py
+```
+
+By default, the importer reads from the sibling source repo at `../skyrim_potion_cocktail_app`. Pass `--source /path/to/source/repo` to use a different checkout.
+
+The import writes:
+
+- `shared/data/ingredients.json`
+- `shared/domain/rarity.py`
+- `shared/source_docs/AGENTS.md`
+- `shared/source_docs/handoff.md`
+- `shared/source_docs/discovery-scoring.md`
+- `shared/manifests/source-baseline.json`
+
+Validate the imported baseline with:
+
+```sh
+python3 tools/validate_shared_baseline.py
+```
